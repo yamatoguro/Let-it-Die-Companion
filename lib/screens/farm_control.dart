@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/screens/dashboard.dart';
 
@@ -11,6 +12,38 @@ class FarmControl extends StatefulWidget {
 
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
+  List<Widget> materials = [
+    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: 12),
+    ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10'),
+    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: 15),
+    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: 22),
+    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: 3),
+    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: 35),
+    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: 13),
+    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: 14),
+    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: 9),
+    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: 4),
+    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: 8),
+    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: 19),
+    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: 21),
+  ];
+
+  _addItem() {
+    final Future future = Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => RnDForm()),
+    );
+    future.then((value) {
+      var v = ReturnValue(mat: value.mat, qtd: value.qtd);
+      materials.add(ItemMaterial(
+        material: mats[v.mat]![2],
+        checked: false,
+        quantity: v.qtd,
+      ));
+      setState(() => debugPrint(value.mat + '/' + value.qtd));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,23 +82,27 @@ class _FarmControlState extends State<FarmControl> {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: ListView(
-            children: <Widget>[
-              const ListTile(
-                title: Text('Dashboard > Farm Control'),
-                subtitle: Text('Select which materials you want to farm'),
+          child: Column(
+            children: [
+              ListTile(
+                title: const Text('Dashboard > Farm Control'),
+                subtitle: const Text('Track what you get on each run'),
+                trailing: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('End run'),
+                ),
               ),
-              ItemMaterial(
-                material: iron[2],
-                checked: false,
-                quantity: 0,
-              )
+              Expanded(
+                child: ListView(
+                  children: [...materials],
+                ),
+              ),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => _addItem(),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
@@ -76,7 +113,7 @@ class _FarmControlState extends State<FarmControl> {
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;
   final bool checked;
-  final int quantity;
+  final String quantity;
 
   const ItemMaterial(
       {Key? key,
@@ -90,6 +127,8 @@ class ItemMaterial extends StatefulWidget {
 }
 
 class _ItemMaterialState extends State<ItemMaterial> {
+  int current = 0;
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -103,15 +142,24 @@ class _ItemMaterialState extends State<ItemMaterial> {
         subtitle: Row(
           children: [..._getStars(widget.material.rarity)],
         ),
-        trailing: Checkbox(
-          value: widget.checked,
-          onChanged: (bool? value) {
-            setState(() {});
-          },
+        trailing: Wrap(
+          children: [
+            Text('$current/' + widget.quantity.toString(),
+                style: TextStyle(fontSize: 32, height: 1.5)),
+            IconButton(
+                icon: Icon(Icons.add),
+                onPressed: () {
+                  current++;
+                  setState(() {});
+                }),
+            IconButton(
+                icon: Icon(Icons.remove),
+                onPressed: () {
+                  current--;
+                  setState(() {});
+                }),
+          ],
         ),
-        onTap: () {
-          setState(() {});
-        },
       ),
     );
   }
@@ -122,6 +170,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
       stars.add(const Icon(
         Icons.star,
         color: Colors.yellowAccent,
+        size: 15,
       ));
     }
     return stars;

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lid_companion">
    <application
-        android:label="lid_companion"
+        android:label="Let it Die Companion"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
