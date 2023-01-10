@@ -38,7 +38,7 @@ class _RnDFormState extends State<RnDForm> {
                   debugPrint(newValue);
 
                   if (newValue != null) {
-                    String type = processValue(newValue);
+                    String type = processMatType(newValue);
                     matType = newValue;
                     var list = mats[type]!;
                     var v;
@@ -122,8 +122,9 @@ class _RnDFormState extends State<RnDForm> {
                   Navigator.pop(
                       context,
                       ReturnValue(
-                        mat: mat!,
-                        qtd: widget._controllerConta.text,
+                        matType: processMatType(matType),
+                        mat: processMat(mat),
+                        qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
                 child: Text(
@@ -140,7 +141,18 @@ class _RnDFormState extends State<RnDForm> {
     );
   }
 
-  String processValue(String? newValue) {
+  int processMat(String? newValue) {
+    if (materials.isNotEmpty) {
+      for (var i = 0; i < materials.length; i++) {
+        if (newValue == materials[i]) {
+          return i;
+        }
+      }
+    }
+    return 0;
+  }
+
+  String processMatType(newValue) {
     switch (newValue ?? '') {
       case 'Aluminium':
         return 'aluminium';
@@ -173,8 +185,9 @@ class _RnDFormState extends State<RnDForm> {
 }
 
 class ReturnValue {
-  final String mat;
-  final String qtd;
+  final String matType;
+  final int mat;
+  final int qtd;
 
-  ReturnValue({required this.mat, required this.qtd});
+  ReturnValue({required this.matType, required this.mat, required this.qtd});
 }

@@ -13,19 +13,19 @@ class FarmControl extends StatefulWidget {
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
   List<Widget> materials = [
-    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: 12),
+    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: '12'),
     ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10'),
-    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: 15),
-    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: 22),
-    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: 3),
-    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: 35),
-    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: 13),
-    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: 14),
-    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: 9),
-    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: 4),
-    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: 8),
-    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: 19),
-    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: 21),
+    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: '15'),
+    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: '22'),
+    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: '3'),
+    ItemMaterial(material: mats['copper']![7], checked: false, quantity: '35'),
+    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: '13'),
+    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: '14'),
+    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: '9'),
+    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: '4'),
+    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: '8'),
+    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: '19'),
+    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: '21'),
   ];
 
   _addItem() {
@@ -34,13 +34,15 @@ class _FarmControlState extends State<FarmControl> {
       MaterialPageRoute(builder: (context) => RnDForm()),
     );
     future.then((value) {
-      var v = ReturnValue(mat: value.mat, qtd: value.qtd);
-      materials.add(ItemMaterial(
-        material: mats[v.mat]![2],
-        checked: false,
-        quantity: v.qtd,
-      ));
-      setState(() => debugPrint(value.mat + '/' + value.qtd));
+      if (value != null) {
+        var v = ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
+        materials.add(ItemMaterial(
+          material: mats[v.matType]![v.mat],
+          checked: false,
+          quantity: v.qtd.toString(),
+        ));
+        setState(() => {});
+      }
     });
   }
 
@@ -79,25 +81,32 @@ class _FarmControlState extends State<FarmControl> {
           // ),
         ],
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              ListTile(
-                title: const Text('Dashboard > Farm Control'),
-                subtitle: const Text('Track what you get on each run'),
-                trailing: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('End run'),
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image:
+                    AssetImage("assets/images/Yotsuyama Logo_transparent.png"),
+                fit: BoxFit.scaleDown)),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListTile(
+                  title: const Text('Dashboard > Farm Control'),
+                  subtitle: const Text('Track what you get on each run'),
+                  trailing: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('End run'),
+                  ),
                 ),
-              ),
-              Expanded(
-                child: ListView(
-                  children: [...materials],
+                Expanded(
+                  child: ListView(
+                    children: [...materials],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -132,6 +141,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.grey[800]!.withOpacity(0.8),
       child: ListTile(
         leading: Image.network(
           widget.material.url,
@@ -145,9 +155,9 @@ class _ItemMaterialState extends State<ItemMaterial> {
         trailing: Wrap(
           children: [
             Text('$current/' + widget.quantity.toString(),
-                style: TextStyle(fontSize: 32, height: 1.5)),
+                style: const TextStyle(fontSize: 22, height: 2)),
             IconButton(
-                icon: Icon(Icons.add),
+                icon: const Icon(Icons.add),
                 onPressed: () {
                   current++;
                   setState(() {});
