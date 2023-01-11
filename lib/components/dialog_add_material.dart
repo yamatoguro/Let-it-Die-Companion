@@ -52,7 +52,7 @@ class _RnDFormState extends State<RnDForm> {
                 });
               },
               items: <String>[
-                'Aluminium',
+                'Aluminum',
                 'Copper',
                 'Iron',
                 'Oil',
@@ -154,8 +154,8 @@ class _RnDFormState extends State<RnDForm> {
 
   String processMatType(newValue) {
     switch (newValue ?? '') {
-      case 'Aluminium':
-        return 'aluminium';
+      case 'Aluminum':
+        return 'aluminum';
       case 'Copper':
         return 'copper';
       case 'Iron':
@@ -179,7 +179,7 @@ class _RnDFormState extends State<RnDForm> {
       case "Jackal's Materials":
         return 'jackal';
       default:
-        return 'aluminium';
+        return 'aluminum';
     }
   }
 }
