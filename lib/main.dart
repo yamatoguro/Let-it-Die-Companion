@@ -12,6 +12,7 @@ class LidCompanion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Let it Die Companion',
       theme: ThemeData(
         primaryColor: Colors.black,
