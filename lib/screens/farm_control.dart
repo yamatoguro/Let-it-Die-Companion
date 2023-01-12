@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
-import 'package:lid_companion/screens/dashboard.dart';
 import 'package:lid_companion/components/item_material.dart';
 
 class FarmControl extends StatefulWidget {
@@ -75,35 +74,17 @@ class _FarmControlState extends State<FarmControl> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Let it Die Companion'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home_outlined),
-            onPressed: () {
-              Navigator.pop(
-                context,
-                MaterialPageRoute(builder: (context) => const Dashboard()),
-              );
-            },
-          ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.settings_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.help_outline,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.schedule_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: const Icon(Icons.home_outlined),
+        //     onPressed: () {
+        //       Navigator.pop(
+        //         context,
+        //         MaterialPageRoute(builder: (context) => const Dashboard()),
+        //       );
+        //     },
+        //   ),
+        // ],
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -116,7 +97,8 @@ class _FarmControlState extends State<FarmControl> {
             child: Column(
               children: [
                 ListTile(
-                  title: const Text('Dashboard > Farm Control'),
+                  // title: const Text('Dashboard > Farm Control'),
+                  title: const Text('Cake List'),
                   subtitle: const Text('Track what you get on each run'),
                   trailing: ElevatedButton(
                     onPressed: () {
@@ -124,12 +106,17 @@ class _FarmControlState extends State<FarmControl> {
                       for (var element in materials) {
                         result.add(element as ItemMaterial);
                       }
-                      showDialog(
+                      Future future = showDialog(
                         context: context,
                         builder: ((contextDialog) => FarmResult(
                               materials: result,
                             )),
                       );
+                      future.then((value) {
+                        setState(() {
+                          materials = [];
+                        });
+                      });
                     },
                     child: const Text('End run'),
                   ),

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -6,11 +8,12 @@ import 'package:lid_companion/materials_data.dart';
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;
   final bool checked;
+  num current = 0;
   final String quantity;
   final dynamic delete;
   final dynamic edit;
 
-  const ItemMaterial(
+  ItemMaterial(
       {Key? key,
       required this.material,
       required this.checked,
@@ -66,12 +69,14 @@ class _ItemMaterialState extends State<ItemMaterial> {
                   icon: const Icon(Icons.add),
                   onPressed: () {
                     current++;
+                    widget.current = current;
                     setState(() {});
                   }),
               IconButton(
                   icon: const Icon(Icons.remove),
                   onPressed: () {
                     current--;
+                    widget.current = current;
                     setState(() {});
                   }),
             ],

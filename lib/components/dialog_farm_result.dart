@@ -67,8 +67,8 @@ class _FarmResultState extends State<FarmResult> {
       // ResultItem(material: mats['iron']![2], quantity: '12'),
     ];
     for (var e in widget.materials) {
-      materialResult
-          .add(ResultItem(material: e.material, quantity: e.quantity));
+      materialResult.add(
+          ResultItem(material: e.material, quantity: e.current.toString()));
     }
     return materialResult;
   }
@@ -76,7 +76,7 @@ class _FarmResultState extends State<FarmResult> {
   _total() {
     num total = 0;
     for (var element in widget.materials) {
-      total += int.parse(element.quantity);
+      total += element.current;
     }
     return total.toString();
   }
