@@ -2,9 +2,9 @@
   "Beam Katana": {
     "url": "https://letitdie.gamepedia.com/Machete",
     "BP": "01-10F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -523,9 +523,9 @@
   "Buzzsaw Knuckles": {
     "url": "https://letitdie.gamepedia.com/Buzzsaw",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -1062,9 +1062,9 @@
   "Electro Trigger": {
     "url": "https://letitdie.gamepedia.com/Buzzsaw",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -1158,9 +1158,9 @@
   "Hammer": {
     "url": "https://letitdie.gamepedia.com/Hammer",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -1695,9 +1695,9 @@
   "Hammer RG": {
     "url": "https://letitdie.gamepedia.com/Hammer",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -1722,9 +1722,9 @@
   "Combat Pickaxe": {
     "url": "https://letitdie.gamepedia.com/Pickaxe",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -2260,9 +2260,9 @@
   "Death Stalker": {
     "url": "https://letitdie.gamepedia.com/Pickaxe",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -2356,9 +2356,9 @@
   "Nail Gun": {
     "url": "https://letitdie.gamepedia.com/Nail_Gun",
     "BP": "11-20F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -2918,9 +2918,9 @@
   "Welding Gun": {
     "url": "https://letitdie.gamepedia.com/Welding_Gun",
     "BP": "21-30F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "010%",
       "DEX": "090%"
     },
@@ -3480,9 +3480,9 @@
   "Drill Arm": {
     "url": "https://letitdie.gamepedia.com/Drill",
     "BP": "11-20F C",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -4032,9 +4032,9 @@
   "TDM Drill": {
     "url": "https://letitdie.gamepedia.com/Drill",
     "BP": "11-20F C",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -4527,9 +4527,9 @@
   "Iron": {
     "url": "https://letitdie.gamepedia.com/Iron",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -5070,9 +5070,9 @@
   "Chopper": {
     "url": "https://letitdie.gamepedia.com/Chopper",
     "BP": "31-40F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -5634,9 +5634,9 @@
   "Fireworks": {
     "url": "https://letitdie.gamepedia.com/Fireworks",
     "BP": "01-10F",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -6180,9 +6180,9 @@
   "Chainsaw Viper": {
     "url": "https://letitdie.gamepedia.com/Chainsaw",
     "BP": "11-20F C",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -6748,9 +6748,9 @@
   "Black Mamba": {
     "url": "https://letitdie.gamepedia.com/Chainsaw",
     "BP": "11-20F C",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -6844,9 +6844,9 @@
   "Spike Crusher": {
     "url": "https://letitdie.gamepedia.com/Spike_Crusher",
     "BP": "44CE",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -7161,9 +7161,9 @@
   "Static Massager": {
     "url": "https://letitdie.gamepedia.com/Static_Massager",
     "BP": "44CE",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "040%",
       "DEX": "060%"
     },
@@ -7478,9 +7478,9 @@
   "Timber": {
     "url": "https://letitdie.gamepedia.com/Timber",
     "BP": "Hernia",
-    "fraction": "D.O.D. ARMS",
+    "faction": "D.O.D. ARMS",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -8048,9 +8048,9 @@
   "Machete": {
     "url": "https://letitdie.gamepedia.com/Machete",
     "BP": "01-10F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -8594,9 +8594,9 @@
   "Machete RG": {
     "url": "https://letitdie.gamepedia.com/Machete",
     "BP": "01-10F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -8621,9 +8621,9 @@
   "Butterfly Knife": {
     "url": "https://letitdie.gamepedia.com/Knife",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -9166,9 +9166,9 @@
   "Nosferatu": {
     "url": "https://letitdie.gamepedia.com/Knife",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -9261,9 +9261,9 @@
   "FFWF-103 Flamethrower": {
     "url": "https://letitdie.gamepedia.com/Flamethrower",
     "BP": "TDM",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -9813,9 +9813,9 @@
   "TDM Flamethrower": {
     "url": "https://letitdie.gamepedia.com/Flamethrower",
     "BP": "TDM",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -10313,9 +10313,9 @@
   "Glinty Magnum": {
     "url": "https://letitdie.gamepedia.com/Magnum",
     "BP": "01-10F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "030%",
       "DEX": "070%"
     },
@@ -10868,9 +10868,9 @@
   "Demon Gun": {
     "url": "https://letitdie.gamepedia.com/Demon_Gun",
     "BP": "Event",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "030%",
       "DEX": "070%"
     },
@@ -11382,9 +11382,9 @@
   "Stun Rod": {
     "url": "https://letitdie.gamepedia.com/Stun_Rod",
     "BP": "21-30F C",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -11950,9 +11950,9 @@
   "Shotgun": {
     "url": "https://letitdie.gamepedia.com/Shotgun",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -12499,9 +12499,9 @@
   "DUKE-02 Sniper Rifle": {
     "url": "https://letitdie.gamepedia.com/Sniper_Rifle",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -13051,9 +13051,9 @@
   "GLIDER": {
     "url": "https://letitdie.gamepedia.com/GLIDER",
     "BP": "Event",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -13578,9 +13578,9 @@
   "Hellhound": {
     "url": "https://letitdie.gamepedia.com/Sniper_Rifle",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -13673,9 +13673,9 @@
   "KAMAS-A1 Assault Rifle": {
     "url": "https://letitdie.gamepedia.com/Assault_Rifle",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -14226,9 +14226,9 @@
   "KAMAS-WoT Assault Rifle": {
     "url": "https://letitdie.gamepedia.com/Assault_Rifle",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -14744,9 +14744,9 @@
   "KAMAS-A1 Assault Rifle RE": {
     "url": "https://letitdie.gamepedia.com/Assault_Rifle",
     "BP": "11-20F",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -15297,9 +15297,9 @@
   "Assault Rifle WoT": {
     "url": "https://letitdie.gamepedia.com/KAMAS-WoT_Assault_Rifle",
     "BP": "Event",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -15815,9 +15815,9 @@
   "Assault Rifle RE": {
     "url": "https://letitdie.gamepedia.com/KAMAS-A1_Assault_Rifle_RE",
     "BP": "Hernia",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -16368,9 +16368,9 @@
   "Shovel": {
     "url": "https://letitdie.gamepedia.com/Shovel",
     "BP": "Hernia",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -16926,9 +16926,9 @@
   "M-404 Rocket Launcher": {
     "url": "https://letitdie.gamepedia.com/Rocket_Launcher",
     "BP": "21-30F C",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -17484,9 +17484,9 @@
   "TDM Rocket Launcher": {
     "url": "https://letitdie.gamepedia.com/Rocket_Launcher",
     "BP": "21-30F C",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -17984,9 +17984,9 @@
   "Pandemic": {
     "url": "https://letitdie.gamepedia.com/Rocket_Launcher",
     "BP": "21-30F C",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -18080,9 +18080,9 @@
   "M2G-87": {
     "url": "https://letitdie.gamepedia.com/M2G-87",
     "BP": "44CE",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -18400,9 +18400,9 @@
   "Stun Gun": {
     "url": "https://letitdie.gamepedia.com/Stun_Gun",
     "BP": "Hernia",
-    "fraction": "War Ensemble",
+    "faction": "War Ensemble",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -18970,9 +18970,9 @@
   "Axe": {
     "url": "https://letitdie.gamepedia.com/Axe",
     "BP": "11-20F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -19522,9 +19522,9 @@
   "Robber Crossbow": {
     "url": "https://letitdie.gamepedia.com/Crossbow",
     "BP": "01-10F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -20065,9 +20065,9 @@
   "Muspelheim": {
     "url": "https://letitdie.gamepedia.com/Crossbow",
     "BP": "01-10F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -20161,9 +20161,9 @@
   "Knight's Lance": {
     "url": "https://letitdie.gamepedia.com/Spear",
     "BP": "31-40F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -20721,9 +20721,9 @@
   "Belphegor": {
     "url": "https://letitdie.gamepedia.com/Spear",
     "BP": "31-40F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -20816,9 +20816,9 @@
   "Masamune Blade": {
     "url": "https://letitdie.gamepedia.com/Katana",
     "BP": "31-40F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "060%",
       "DEX": "040%"
     },
@@ -21375,9 +21375,9 @@
   "TDM Katana": {
     "url": "https://letitdie.gamepedia.com/Katana",
     "BP": "31-40F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "060%",
       "DEX": "040%"
     },
@@ -21870,9 +21870,9 @@
   "Takama-ga-hara": {
     "url": "https://letitdie.gamepedia.com/Katana",
     "BP": "31-40F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "060%",
       "DEX": "040%"
     },
@@ -21966,9 +21966,9 @@
   "Longsword": {
     "url": "https://letitdie.gamepedia.com/Sword",
     "BP": "11-20F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -22496,9 +22496,9 @@
   "Longsword RE": {
     "url": "https://letitdie.gamepedia.com/Sword",
     "BP": "11-20F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -23026,9 +23026,9 @@
   "Sword RE": {
     "url": "https://letitdie.gamepedia.com/Longsword_RE",
     "BP": "Hernia",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -23556,9 +23556,9 @@
   "Claws": {
     "url": "https://letitdie.gamepedia.com/Claws",
     "BP": "11-20F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -24095,9 +24095,9 @@
   "Flail": {
     "url": "https://letitdie.gamepedia.com/Flail",
     "BP": "Hernia",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -24656,9 +24656,9 @@
   "Fire Rod": {
     "url": "https://letitdie.gamepedia.com/Fire_Rod",
     "BP": "21-30F",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "010%",
       "DEX": "090%"
     },
@@ -25216,9 +25216,9 @@
   "Shuriken": {
     "url": "https://letitdie.gamepedia.com/Shuriken",
     "BP": "Hernia",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "010%",
       "DEX": "090%"
     },
@@ -25748,9 +25748,9 @@
   "Silver": {
     "url": "https://letitdie.gamepedia.com/Death%27s_Scythe",
     "BP": "DLC",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -26063,9 +26063,9 @@
   "Gold": {
     "url": "https://letitdie.gamepedia.com/Death%27s_Scythe",
     "BP": "DLC",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -26378,9 +26378,9 @@
   "Red": {
     "url": "https://letitdie.gamepedia.com/Death%27s_Scythe",
     "BP": "DLC",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -26811,9 +26811,9 @@
   "Lightning Wand": {
     "url": "https://letitdie.gamepedia.com/Thunder_Rod",
     "BP": "21-30F C",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "010%",
       "DEX": "090%"
     },
@@ -27371,9 +27371,9 @@
   "TDM Thunder Rod": {
     "url": "https://letitdie.gamepedia.com/Thunder_Rod",
     "BP": "21-30F C",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "010%",
       "DEX": "090%"
     },
@@ -27871,9 +27871,9 @@
   "Vajra of Light": {
     "url": "https://letitdie.gamepedia.com/Vajra_of_Light",
     "BP": "44CE",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "050%",
       "DEX": "050%"
     },
@@ -28188,9 +28188,9 @@
   "Head of Medusa": {
     "url": "https://letitdie.gamepedia.com/Head_of_Medusa",
     "BP": "44CE",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -28505,9 +28505,9 @@
   "Lion Dance Knuckles": {
     "url": "https://letitdie.gamepedia.com/Lion_Dance_Knuckles",
     "BP": "Hernia",
-    "fraction": "Candle Wolf",
+    "faction": "Candle Wolf",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -29075,9 +29075,9 @@
   "Metal Bat": {
     "url": "https://letitdie.gamepedia.com/Bat",
     "BP": "01-10F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -29609,9 +29609,9 @@
   "Thunderbolt": {
     "url": "https://letitdie.gamepedia.com/Bat",
     "BP": "01-10F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -29705,9 +29705,9 @@
   "Cleaver Saber": {
     "url": "https://letitdie.gamepedia.com/Saber",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -30264,9 +30264,9 @@
   "TDM Saber": {
     "url": "https://letitdie.gamepedia.com/Saber",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -30760,9 +30760,9 @@
   "Bloody Pitching Machine": {
     "url": "https://letitdie.gamepedia.com/Pitching_Machine",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -31326,9 +31326,9 @@
   "TDM Pitching Machine": {
     "url": "https://letitdie.gamepedia.com/Pitching_Machine",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "020%",
       "DEX": "080%"
     },
@@ -31821,9 +31821,9 @@
   "Boxing Gloves": {
     "url": "https://letitdie.gamepedia.com/Boxing_Gloves",
     "BP": "TDM",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "080%",
       "DEX": "020%"
     },
@@ -32373,9 +32373,9 @@
   "Yo-yo": {
     "url": "https://letitdie.gamepedia.com/Brutal_Yo-Yo",
     "BP": "Hernia",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -32933,9 +32933,9 @@
   "Bowling Stomper": {
     "url": "https://letitdie.gamepedia.com/Bowling_Ball",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -33482,9 +33482,9 @@
   "TDM Bowling Ball": {
     "url": "https://letitdie.gamepedia.com/Bowling_Ball",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -33978,9 +33978,9 @@
   "Fire Baton": {
     "url": "https://letitdie.gamepedia.com/Fire_Baton",
     "BP": "11-20F C",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "060%",
       "DEX": "040%"
     },
@@ -34534,9 +34534,9 @@
   "Motor Psycho": {
     "url": "https://letitdie.gamepedia.com/Motorcycle",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -35101,9 +35101,9 @@
   "Executioner's Ride ZX": {
     "url": "https://letitdie.gamepedia.com/Motorcycle",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -35501,9 +35501,9 @@
   "Emperor": {
     "url": "https://letitdie.gamepedia.com/Motorcycle",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -35597,9 +35597,9 @@
   "TDM Motorcycle": {
     "url": "https://letitdie.gamepedia.com/Motorcycle",
     "BP": "21-30F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -36092,9 +36092,9 @@
   "Motorcycle ZX": {
     "url": "https://letitdie.gamepedia.com/Executioner%27s_Ride_ZX",
     "BP": "Event",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "100%",
       "DEX": "000%"
     },
@@ -36492,9 +36492,9 @@
   "Apocalyptic Hockey Stick": {
     "url": "https://letitdie.gamepedia.com/Hockey_Stick",
     "BP": "01-10F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -37037,9 +37037,9 @@
   "Judgement Day": {
     "url": "https://letitdie.gamepedia.com/Hockey_Stick",
     "BP": "01-10F",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -37133,9 +37133,9 @@
   "Archer's Bow": {
     "url": "https://letitdie.gamepedia.com/Archer%27s_Bow",
     "BP": "Hernia",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "040%",
       "DEX": "060%"
     },
@@ -37708,9 +37708,9 @@
   "Mortal Bobslayer": {
     "url": "https://letitdie.gamepedia.com/Mortal_Bobslayer",
     "BP": "44CE",
-    "fraction": "M.I.L.K.",
+    "faction": "M.I.L.K.",
     "hands": "2-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "065%",
       "DEX": "035%"
     },
@@ -38025,9 +38025,9 @@
   "Jackal Sword": {
     "url": "https://letitdie.gamepedia.com/Jackal_Sword",
     "BP": "Jackals",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -38418,9 +38418,9 @@
   "Jackal Sword D": {
     "url": "https://letitdie.gamepedia.com/Jackal_Sword_D",
     "BP": "Jackals V3",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },
@@ -38751,9 +38751,9 @@
   "Jackal Blaster": {
     "url": "https://letitdie.gamepedia.com/Jackal_Blaster",
     "BP": "Jackals",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -39134,9 +39134,9 @@
   "Jackal Blaster D": {
     "url": "https://letitdie.gamepedia.com/Jackal_Blaster_D",
     "BP": "Jackals V3",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "000%",
       "DEX": "100%"
     },
@@ -39462,9 +39462,9 @@
   "Jackal Yo-Yo": {
     "url": "https://letitdie.gamepedia.com/Jackal_Yo-Yo",
     "BP": "Jackals",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -39855,9 +39855,9 @@
   "Jackal Yo-Yo D": {
     "url": "https://letitdie.gamepedia.com/Jackal_Yo-Yo_D",
     "BP": "Jackals V3",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "1-Handed",
-    "scaleing": {
+    "scaling": {
       "STR": "070%",
       "DEX": "030%"
     },
@@ -40188,9 +40188,9 @@
   "Fists": {
     "url": "https://letitdie.gamepedia.com/Fists",
     "BP": "NA",
-    "fraction": "NA",
+    "faction": "NA",
     "hands": "Yes",
-    "scaleing": {
+    "scaling": {
       "STR": "090%",
       "DEX": "010%"
     },

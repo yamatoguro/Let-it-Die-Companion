@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/screens/dashboard.dart';
 
 void main() {
@@ -12,6 +11,7 @@ class LidCompanion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Let it Die Companion',
       theme: ThemeData(
         primaryColor: Colors.black,
