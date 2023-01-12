@@ -89,7 +89,7 @@ class _FarmControlState extends State<FarmControl> {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/Yotsuyama.png"),
+                image: AssetImage("assets/images/app-logo3.png"),
                 fit: BoxFit.scaleDown)),
         child: Center(
           child: Padding(

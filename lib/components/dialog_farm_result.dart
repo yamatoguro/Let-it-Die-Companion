@@ -40,7 +40,7 @@ class _FarmResultState extends State<FarmResult> {
             children: [
               const Text(
                 "Total storage used on this run: ",
-                style: TextStyle(fontSize: 20, height: 1),
+                style: TextStyle(fontSize: 16, height: 1),
               ),
               Text(
                 _total(),
