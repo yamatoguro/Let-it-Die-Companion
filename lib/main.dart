@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/screens/dashboard.dart';
 
 void main() {

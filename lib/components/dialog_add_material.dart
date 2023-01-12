@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:lid_companion/materials_data.dart';
 
 class RnDForm extends StatefulWidget {
@@ -27,7 +28,7 @@ class _RnDFormState extends State<RnDForm> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: DropdownButton<String>(
-              hint: Text('Material type'),
+              hint: const Text('Material type'),
               isExpanded: true,
               value: matType,
               icon: const Icon(Icons.arrow_drop_down),
@@ -78,7 +79,7 @@ class _RnDFormState extends State<RnDForm> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: DropdownButton<String>(
-              hint: Text('Specify Material'),
+              hint: const Text('Specify Material'),
               isExpanded: true,
               value: mat,
               icon: const Icon(Icons.arrow_drop_down),
@@ -105,10 +106,10 @@ class _RnDFormState extends State<RnDForm> {
             child: TextField(
               controller: widget._controllerConta,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Quantity needed',
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24.0,
               ),
             ),
@@ -127,7 +128,7 @@ class _RnDFormState extends State<RnDForm> {
                         qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
-                child: Text(
+                child: const Text(
                   'Add Material',
                   style: TextStyle(
                     fontSize: 16.0,

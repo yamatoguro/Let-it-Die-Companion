@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:lid_companion/materials_data.dart';
-import 'package:lid_companion/screens/farm_control.dart';
 
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;
@@ -35,7 +34,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
       dragStartBehavior: DragStartBehavior.start,
       endActionPane: ActionPane(
         extentRatio: 0.15,
-        motion: ScrollMotion(),
+        motion: const ScrollMotion(),
         children: [
           SlidableAction(
             onPressed: (context) {
@@ -70,7 +69,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
                     setState(() {});
                   }),
               IconButton(
-                  icon: Icon(Icons.remove),
+                  icon: const Icon(Icons.remove),
                   onPressed: () {
                     current--;
                     setState(() {});
