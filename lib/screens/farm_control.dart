@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lid_companion/components/dialog_add_material.dart';
+import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
-import 'package:lid_companion/screens/dashboard.dart';
 import 'package:lid_companion/components/item_material.dart';
 
 class FarmControl extends StatefulWidget {
@@ -54,19 +54,19 @@ class _FarmControlState extends State<FarmControl> {
   }
 
   List<Widget> materials = [
-    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: '12', delete: removeItem),
-    // ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10', delete: removeItem),
-    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: '15', delete: removeItem),
-    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: '22', delete: removeItem),
-    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: '3', delete: removeItem),
-    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: '35', delete: removeItem),
-    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: '13', delete: removeItem),
-    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: '14', delete: removeItem),
-    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: '9', delete: removeItem),
-    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: '4', delete: removeItem),
-    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: '8', delete: removeItem),
-    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: '19', delete: removeItem),
-    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: '21', delete: removeItem),
+    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: '12'),
+    // ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10'),
+    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: '15'),
+    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: '22'),
+    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: '3'),
+    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: '35'),
+    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: '13'),
+    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: '14'),
+    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: '9'),
+    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: '4'),
+    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: '8'),
+    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: '19'),
+    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: '21'),
   ];
 
   @override
@@ -74,41 +74,22 @@ class _FarmControlState extends State<FarmControl> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Let it Die Companion'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home_outlined),
-            onPressed: () {
-              Navigator.pop(
-                context,
-                MaterialPageRoute(builder: (context) => const Dashboard()),
-              );
-            },
-          ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.settings_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.help_outline,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.schedule_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: const Icon(Icons.home_outlined),
+        //     onPressed: () {
+        //       Navigator.pop(
+        //         context,
+        //         MaterialPageRoute(builder: (context) => const Dashboard()),
+        //       );
+        //     },
+        //   ),
+        // ],
       ),
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image:
-                    AssetImage("assets/images/Yotsuyama Logo_transparent.png"),
+                image: AssetImage("assets/images/Yotsuyama.png"),
                 fit: BoxFit.scaleDown)),
         child: Center(
           child: Padding(
@@ -116,10 +97,27 @@ class _FarmControlState extends State<FarmControl> {
             child: Column(
               children: [
                 ListTile(
-                  title: const Text('Dashboard > Farm Control'),
+                  // title: const Text('Dashboard > Farm Control'),
+                  title: const Text('Cake List'),
                   subtitle: const Text('Track what you get on each run'),
                   trailing: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      List<ItemMaterial> result = [];
+                      for (var element in materials) {
+                        result.add(element as ItemMaterial);
+                      }
+                      Future future = showDialog(
+                        context: context,
+                        builder: ((contextDialog) => FarmResult(
+                              materials: result,
+                            )),
+                      );
+                      future.then((value) {
+                        setState(() {
+                          materials = [];
+                        });
+                      });
+                    },
                     child: const Text('End run'),
                   ),
                 ),
