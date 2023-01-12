@@ -33,8 +33,7 @@ class Dashboard extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image:
-                    AssetImage("assets/images/Yotsuyama Logo_transparent.png"),
+                image: AssetImage("assets/images/Yotsuyama.png"),
                 fit: BoxFit.scaleDown)),
         child: Center(
           child: Padding(

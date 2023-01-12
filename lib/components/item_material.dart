@@ -15,7 +15,7 @@ class ItemMaterial extends StatefulWidget {
       required this.material,
       required this.checked,
       required this.quantity,
-      required this.delete,
+      this.delete,
       this.edit})
       : super(key: key);
 
