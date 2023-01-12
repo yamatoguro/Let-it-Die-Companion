@@ -28,10 +28,8 @@ class _FarmResultState extends State<FarmResult> {
             padding: EdgeInsets.zero,
             height: 320.0,
             width: 300.0,
-            child: Expanded(
-              child: ListView(
-                children: [..._getMaterialResult()],
-              ),
+            child: ListView(
+              children: [..._getMaterialResult()],
             ),
           ),
           Row(
