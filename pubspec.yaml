@@ -32,7 +32,7 @@ flutter:
     - assets/images/
 
 flutter_icons:
-  image_path: "assets/images/app-logo.png" 
+  image_path: "assets/images/app-logo8.png" 
   android: true
   ios: true
   # optionally, as transparency is not allowed on app store
