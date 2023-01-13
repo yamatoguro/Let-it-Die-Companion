@@ -7,7 +7,6 @@ import 'package:lid_companion/materials_data.dart';
 
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;
-  final bool checked;
   num current = 0;
   final String quantity;
   final dynamic delete;
@@ -16,7 +15,6 @@ class ItemMaterial extends StatefulWidget {
   ItemMaterial(
       {Key? key,
       required this.material,
-      required this.checked,
       required this.quantity,
       this.delete,
       this.edit})
@@ -27,8 +25,6 @@ class ItemMaterial extends StatefulWidget {
 }
 
 class _ItemMaterialState extends State<ItemMaterial> {
-  int current = 0;
-
   @override
   Widget build(BuildContext context) {
     return Slidable(
@@ -63,20 +59,20 @@ class _ItemMaterialState extends State<ItemMaterial> {
           ),
           trailing: Wrap(
             children: [
-              Text('$current/' + widget.quantity.toString(),
-                  style: const TextStyle(fontSize: 22, height: 2)),
+              Text(
+                widget.current.toString() + '/' + widget.quantity.toString(),
+                style: const TextStyle(fontSize: 22, height: 2),
+              ),
               IconButton(
                   icon: const Icon(Icons.add),
                   onPressed: () {
-                    current++;
-                    widget.current = current;
+                    widget.current++;
                     setState(() {});
                   }),
               IconButton(
                   icon: const Icon(Icons.remove),
                   onPressed: () {
-                    current--;
-                    widget.current = current;
+                    widget.current--;
                     setState(() {});
                   }),
             ],

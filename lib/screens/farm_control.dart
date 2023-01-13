@@ -25,7 +25,6 @@ class _FarmControlState extends State<FarmControl> {
             ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
         materials.add(ItemMaterial(
           material: mats[v.matType]![v.mat],
-          checked: false,
           quantity: v.qtd.toString(),
           delete: removeItem,
           edit: editItem,
@@ -54,19 +53,30 @@ class _FarmControlState extends State<FarmControl> {
   }
 
   List<Widget> materials = [
-    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: '12'),
-    // ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10'),
-    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: '15'),
-    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: '22'),
-    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: '3'),
-    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: '35'),
-    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: '13'),
-    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: '14'),
-    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: '9'),
-    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: '4'),
-    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: '8'),
-    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: '19'),
-    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: '21'),
+    ItemMaterial(material: mats['iron']![0], quantity: '2'),
+    ItemMaterial(material: mats['iron']![1], quantity: '2'),
+    ItemMaterial(material: mats['iron']![2], quantity: '2'),
+    ItemMaterial(material: mats['iron']![3], quantity: '2'),
+    ItemMaterial(material: mats['iron']![4], quantity: '2'),
+    ItemMaterial(material: mats['iron']![5], quantity: '2'),
+    ItemMaterial(material: mats['iron']![6], quantity: '2'),
+    ItemMaterial(material: mats['iron']![7], quantity: '2'),
+    // ItemMaterial(material: mats['copper']![0], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![1], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![2], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![3], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![4], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![5], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![6], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![7], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![0], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![1], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![2], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![3], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![4], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![5], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![6], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![7], quantity: '250'),
   ];
 
   @override
@@ -97,7 +107,7 @@ class _FarmControlState extends State<FarmControl> {
             child: Column(
               children: [
                 ListTile(
-                  // title: const Text('Dashboard > Farm Control'),
+                  // title: const Text('Dashboard > Cake List'),
                   title: const Text('Cake List'),
                   subtitle: const Text('Track what you get on each run'),
                   trailing: ElevatedButton(
@@ -114,7 +124,21 @@ class _FarmControlState extends State<FarmControl> {
                       );
                       future.then((value) {
                         setState(() {
+                          List<Widget> mats = materials
+                              .where((e) =>
+                                  int.parse((e as ItemMaterial).quantity) >
+                                  e.current)
+                              .toList();
                           materials = [];
+                          for (var e in mats) {
+                            num quantity =
+                                int.parse((e as ItemMaterial).quantity) -
+                                    e.current;
+                            RnDMaterial m = e.material;
+                            e = ItemMaterial(
+                                material: m, quantity: quantity.toString());
+                            materials.add(e);
+                          }
                         });
                       });
                     },
