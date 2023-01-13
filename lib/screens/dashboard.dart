@@ -47,7 +47,22 @@ class Dashboard extends StatelessWidget {
                   color: Colors.grey[800]!.withOpacity(0.8),
                   child: ListTile(
                     leading: Image.asset('assets/images/IconMaterials.png'),
-                    title: const Text('Farm Control'),
+                    title: const Text('Cake List'),
+                    subtitle: const Text('Control your farm as you wish'),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FarmControl(),
+                          ));
+                    },
+                  ),
+                ),
+                Card(
+                  color: Colors.grey[800]!.withOpacity(0.8),
+                  child: ListTile(
+                    leading: Image.asset('assets/images/IconMaterials.png'),
+                    title: const Text('Cake List'),
                     subtitle: const Text('Control your farm as you wish'),
                     onTap: () {
                       Navigator.push(
