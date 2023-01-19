@@ -1,5 +1,6 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:lid_companion/materials_data.dart';
 
 class RnDForm extends StatefulWidget {
@@ -27,7 +28,7 @@ class _RnDFormState extends State<RnDForm> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: DropdownButton<String>(
-              hint: Text('Material type'),
+              hint: const Text('Material type'),
               isExpanded: true,
               value: matType,
               icon: const Icon(Icons.arrow_drop_down),
@@ -38,7 +39,7 @@ class _RnDFormState extends State<RnDForm> {
                   debugPrint(newValue);
 
                   if (newValue != null) {
-                    String type = processValue(newValue);
+                    String type = processMatType(newValue);
                     matType = newValue;
                     var list = mats[type]!;
                     var v;
@@ -52,7 +53,7 @@ class _RnDFormState extends State<RnDForm> {
                 });
               },
               items: <String>[
-                'Aluminium',
+                'Aluminum',
                 'Copper',
                 'Iron',
                 'Oil',
@@ -78,7 +79,7 @@ class _RnDFormState extends State<RnDForm> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: DropdownButton<String>(
-              hint: Text('Specify Material'),
+              hint: const Text('Specify Material'),
               isExpanded: true,
               value: mat,
               icon: const Icon(Icons.arrow_drop_down),
@@ -105,10 +106,10 @@ class _RnDFormState extends State<RnDForm> {
             child: TextField(
               controller: widget._controllerConta,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Quantity needed',
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24.0,
               ),
             ),
@@ -122,11 +123,12 @@ class _RnDFormState extends State<RnDForm> {
                   Navigator.pop(
                       context,
                       ReturnValue(
-                        mat: mat!,
-                        qtd: widget._controllerConta.text,
+                        matType: processMatType(matType),
+                        mat: processMat(mat),
+                        qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
-                child: Text(
+                child: const Text(
                   'Add Material',
                   style: TextStyle(
                     fontSize: 16.0,
@@ -140,10 +142,21 @@ class _RnDFormState extends State<RnDForm> {
     );
   }
 
-  String processValue(String? newValue) {
+  int processMat(String? newValue) {
+    if (materials.isNotEmpty) {
+      for (var i = 0; i < materials.length; i++) {
+        if (newValue == materials[i]) {
+          return i;
+        }
+      }
+    }
+    return 0;
+  }
+
+  String processMatType(newValue) {
     switch (newValue ?? '') {
-      case 'Aluminium':
-        return 'aluminium';
+      case 'Aluminum':
+        return 'aluminum';
       case 'Copper':
         return 'copper';
       case 'Iron':
@@ -167,14 +180,15 @@ class _RnDFormState extends State<RnDForm> {
       case "Jackal's Materials":
         return 'jackal';
       default:
-        return 'aluminium';
+        return 'aluminum';
     }
   }
 }
 
 class ReturnValue {
-  final String mat;
-  final String qtd;
+  final String matType;
+  final int mat;
+  final int qtd;
 
-  ReturnValue({required this.mat, required this.qtd});
+  ReturnValue({required this.matType, required this.mat, required this.qtd});
 }

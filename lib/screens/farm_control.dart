@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lid_companion/components/dialog_add_material.dart';
+import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
-import 'package:lid_companion/screens/dashboard.dart';
+import 'package:lid_companion/components/item_material.dart';
 
 class FarmControl extends StatefulWidget {
   const FarmControl({Key? key}) : super(key: key);
@@ -12,21 +13,6 @@ class FarmControl extends StatefulWidget {
 
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
-  List<Widget> materials = [
-    // ItemMaterial(material: mats['iron']![2], checked: false, quantity: 12),
-    ItemMaterial(material: mats['iron']![7], checked: false, quantity: '10'),
-    // ItemMaterial(material: mats['iron']![1], checked: false, quantity: 15),
-    // ItemMaterial(material: mats['iron']![0], checked: false, quantity: 22),
-    // ItemMaterial(material: mats['iron']![3], checked: false, quantity: 3),
-    // ItemMaterial(material: mats['copper']![7], checked: false, quantity: 35),
-    // ItemMaterial(material: mats['copper']![2], checked: false, quantity: 13),
-    // ItemMaterial(material: mats['copper']![5], checked: false, quantity: 14),
-    // ItemMaterial(material: mats['copper']![6], checked: false, quantity: 9),
-    // ItemMaterial(material: mats['fiber']![4], checked: false, quantity: 4),
-    // ItemMaterial(material: mats['fiber']![3], checked: false, quantity: 8),
-    // ItemMaterial(material: mats['fiber']![6], checked: false, quantity: 19),
-    // ItemMaterial(material: mats['fiber']![2], checked: false, quantity: 21),
-  ];
 
   _addItem() {
     final Future future = Navigator.push(
@@ -34,70 +20,138 @@ class _FarmControlState extends State<FarmControl> {
       MaterialPageRoute(builder: (context) => RnDForm()),
     );
     future.then((value) {
-      var v = ReturnValue(mat: value.mat, qtd: value.qtd);
-      materials.add(ItemMaterial(
-        material: mats[v.mat]![2],
-        checked: false,
-        quantity: v.qtd,
-      ));
-      setState(() => debugPrint(value.mat + '/' + value.qtd));
+      if (value != null) {
+        var v =
+            ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
+        materials.add(ItemMaterial(
+          material: mats[v.matType]![v.mat],
+          quantity: v.qtd.toString(),
+          delete: removeItem,
+          edit: editItem,
+        ));
+        setState(() => {});
+      }
     });
   }
+
+  removeItem(material) {
+    setState(() {
+      var item = materials
+          .where((e) => (e as ItemMaterial).material == material)
+          .first;
+      materials.remove(item);
+    });
+  }
+
+  editItem(material) {
+    setState(() {
+      var item = materials
+          .where((e) => (e as ItemMaterial).material == material)
+          .first;
+      materials.remove(item);
+    });
+  }
+
+  List<Widget> materials = [
+    ItemMaterial(material: mats['iron']![0], quantity: '2'),
+    ItemMaterial(material: mats['iron']![1], quantity: '2'),
+    ItemMaterial(material: mats['iron']![2], quantity: '2'),
+    ItemMaterial(material: mats['iron']![3], quantity: '2'),
+    ItemMaterial(material: mats['iron']![4], quantity: '2'),
+    ItemMaterial(material: mats['iron']![5], quantity: '2'),
+    ItemMaterial(material: mats['iron']![6], quantity: '2'),
+    ItemMaterial(material: mats['iron']![7], quantity: '2'),
+    // ItemMaterial(material: mats['copper']![0], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![1], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![2], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![3], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![4], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![5], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![6], quantity: '250'),
+    // ItemMaterial(material: mats['copper']![7], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![0], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![1], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![2], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![3], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![4], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![5], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![6], quantity: '250'),
+    // ItemMaterial(material: mats['fiber']![7], quantity: '250'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Let it Die Companion'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.home_outlined),
-            onPressed: () {
-              Navigator.pop(
-                context,
-                MaterialPageRoute(builder: (context) => const Dashboard()),
-              );
-            },
-          ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.settings_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.help_outline,
-          //   ),
-          //   onPressed: () {},
-          // ),
-          // IconButton(
-          //   icon: const Icon(
-          //     Icons.schedule_outlined,
-          //   ),
-          //   onPressed: () {},
-          // ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     icon: const Icon(Icons.home_outlined),
+        //     onPressed: () {
+        //       Navigator.pop(
+        //         context,
+        //         MaterialPageRoute(builder: (context) => const Dashboard()),
+        //       );
+        //     },
+        //   ),
+        // ],
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              ListTile(
-                title: const Text('Dashboard > Farm Control'),
-                subtitle: const Text('Track what you get on each run'),
-                trailing: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('End run'),
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/app-logo.png"),
+                fit: BoxFit.scaleDown)),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListTile(
+                  // title: const Text('Dashboard > Cake List'),
+                  title: const Text('Cake List'),
+                  subtitle: const Text('Track what you get on each run'),
+                  trailing: ElevatedButton(
+                    onPressed: () {
+                      List<ItemMaterial> result = [];
+                      for (var element in materials) {
+                        result.add(element as ItemMaterial);
+                      }
+                      Future future = showDialog(
+                        context: context,
+                        builder: ((contextDialog) => FarmResult(
+                              materials: result,
+                            )),
+                      );
+                      future.then((value) {
+                        setState(() {
+                          List<Widget> mats = materials
+                              .where((e) =>
+                                  int.parse((e as ItemMaterial).quantity) >
+                                  e.current)
+                              .toList();
+                          materials = [];
+                          for (var e in mats) {
+                            num quantity =
+                                int.parse((e as ItemMaterial).quantity) -
+                                    e.current;
+                            RnDMaterial m = e.material;
+                            e = ItemMaterial(
+                                material: m, quantity: quantity.toString());
+                            materials.add(e);
+                          }
+                        });
+                      });
+                    },
+                    child: const Text('End run'),
+                  ),
                 ),
-              ),
-              Expanded(
-                child: ListView(
-                  children: [...materials],
+                Expanded(
+                  child: ListView(
+                    children: [...materials],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -107,72 +161,5 @@ class _FarmControlState extends State<FarmControl> {
         child: const Icon(Icons.add),
       ),
     );
-  }
-}
-
-class ItemMaterial extends StatefulWidget {
-  final RnDMaterial material;
-  final bool checked;
-  final String quantity;
-
-  const ItemMaterial(
-      {Key? key,
-      required this.material,
-      required this.checked,
-      required this.quantity})
-      : super(key: key);
-
-  @override
-  State<ItemMaterial> createState() => _ItemMaterialState();
-}
-
-class _ItemMaterialState extends State<ItemMaterial> {
-  int current = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
-        leading: Image.network(
-          widget.material.url,
-          alignment: Alignment.center,
-          scale: .4,
-        ),
-        title: Text(widget.material.name),
-        subtitle: Row(
-          children: [..._getStars(widget.material.rarity)],
-        ),
-        trailing: Wrap(
-          children: [
-            Text('$current/' + widget.quantity.toString(),
-                style: TextStyle(fontSize: 32, height: 1.5)),
-            IconButton(
-                icon: Icon(Icons.add),
-                onPressed: () {
-                  current++;
-                  setState(() {});
-                }),
-            IconButton(
-                icon: Icon(Icons.remove),
-                onPressed: () {
-                  current--;
-                  setState(() {});
-                }),
-          ],
-        ),
-      ),
-    );
-  }
-
-  _getStars(int rarity) {
-    var stars = [];
-    for (var i = 0; i < widget.material.rarity; i++) {
-      stars.add(const Icon(
-        Icons.star,
-        color: Colors.yellowAccent,
-        size: 15,
-      ));
-    }
-    return stars;
   }
 }

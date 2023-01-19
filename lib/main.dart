@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lid_companion/components/dialog_add_material.dart';
-import 'package:lid_companion/screens/dashboard.dart';
+import 'package:lid_companion/screens/farm_control.dart';
 
 void main() {
   runApp(const LidCompanion());
@@ -12,12 +11,13 @@ class LidCompanion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Let it Die Companion',
       theme: ThemeData(
         primaryColor: Colors.black,
         colorScheme: const ColorScheme.highContrastDark(),
       ),
-      home: const Dashboard(),
+      home: const FarmControl(),
     );
   }
 }
