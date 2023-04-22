@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lid_companion/screens/farm_control.dart';
+import 'package:lid_companion/screens/dashboard.dart';
 
 void main() {
   runApp(const LidCompanion());
@@ -17,7 +17,7 @@ class LidCompanion extends StatelessWidget {
         primaryColor: Colors.black,
         colorScheme: const ColorScheme.highContrastDark(),
       ),
-      home: const FarmControl(),
+      home: const Dashboard(),
     );
   }
 }

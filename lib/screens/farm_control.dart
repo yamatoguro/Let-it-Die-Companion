@@ -53,14 +53,14 @@ class _FarmControlState extends State<FarmControl> {
   }
 
   List<Widget> materials = [
-    ItemMaterial(material: mats['iron']![0], quantity: '2'),
-    ItemMaterial(material: mats['iron']![1], quantity: '2'),
-    ItemMaterial(material: mats['iron']![2], quantity: '2'),
-    ItemMaterial(material: mats['iron']![3], quantity: '2'),
-    ItemMaterial(material: mats['iron']![4], quantity: '2'),
-    ItemMaterial(material: mats['iron']![5], quantity: '2'),
-    ItemMaterial(material: mats['iron']![6], quantity: '2'),
-    ItemMaterial(material: mats['iron']![7], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![0], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![1], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![5], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![6], quantity: '2'),
+    ItemMaterial(material: mats['aluminum']![7], quantity: '2'),
     // ItemMaterial(material: mats['copper']![0], quantity: '250'),
     // ItemMaterial(material: mats['copper']![1], quantity: '250'),
     // ItemMaterial(material: mats['copper']![2], quantity: '250'),
