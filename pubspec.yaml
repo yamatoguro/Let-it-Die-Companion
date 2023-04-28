@@ -16,6 +16,7 @@ dependencies:
   flutter_launcher_name:
   flutter_slidable: ^2.0.0
   flutter_launcher_icons: ^0.8.1
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:

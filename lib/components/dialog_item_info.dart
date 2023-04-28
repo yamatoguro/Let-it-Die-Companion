@@ -6,33 +6,26 @@ import 'package:lid_companion/materials_data.dart';
 class DialogItemInfo extends StatelessWidget {
   final String buttonText;
   RnDMaterial material;
-  DialogItemInfo({Key? key, this.buttonText = 'Ok', required this.material})
+  DialogItemInfo({Key? key, this.buttonText = 'Close', required this.material})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
       scrollable: true,
-      title: Text(material.name),
+      title: Image.network(
+        material.urlFullImage,
+        alignment: Alignment.center,
+        scale: 1,
+        loadingBuilder: (context, child, loadingProgress) {
+          return child;
+        },
+      ),
       content: SizedBox(
-        height: 350.0,
+        height: 200.0,
         width: 300.0,
-        child: Column(
-          children: [
-            Image.network(
-              material.url,
-              alignment: Alignment.center,
-              scale: .4,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [..._getStars(material.rarity), const Text('\n')],
-            ),
-            Expanded(
-              child: material.where,
-            ),
-          ],
+        child: Expanded(
+          child: material.where,
         ),
       ),
       actions: <Widget>[
@@ -42,17 +35,5 @@ class DialogItemInfo extends StatelessWidget {
         )
       ],
     );
-  }
-
-  _getStars(int rarity) {
-    var stars = [];
-    for (var i = 0; i < rarity; i++) {
-      stars.add(const Icon(
-        Icons.star,
-        color: Colors.yellowAccent,
-        size: 15,
-      ));
-    }
-    return stars;
   }
 }
