@@ -60,12 +60,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d5/Aluminum1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 1-Star Material, Aluminum Scraps will mainly appear in Max\'s Area (1-10F).'),
           Text(
@@ -95,12 +95,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0d/Aluminum2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 2-Star Material, Aluminum Cans will mainly appear in Jackson\'s Area (11-20F).'),
           Text(
@@ -129,12 +129,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/02/Aluminum3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 3-Star Material, Aluminum Engine Part will mainly appear in Crowley\'s Area (21-30F).'),
           Text(
@@ -163,12 +163,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8f/Aluminum4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 4-Star Material, Pure Aluminum will mainly appear in Gunkanyama\'s Area (31-40F). Continues appearing until 100F in Tengoku.'),
           Text(
@@ -197,12 +197,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f1/Aluminum5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 5-Star Material, Aluminum Alloy 7075 mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Aluminum-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
@@ -231,12 +231,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7b/Aluminum6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 6-Star Material, Aluminum Alloy 9048 mainly appears above 41F+, on Aluminum-specific floors in Battle To The Top and Tengoku.'),
           Text(
@@ -256,12 +256,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b8/Aluminum7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Aluminum Alloy 9050 only appears on Aluminum-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -281,12 +281,12 @@ List<RnDMaterial> aluminum = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/db/Aluminum8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Aluminum Alloy 9051 can rarely appear in Tengoku on Aluminum-specific floors above 80F.'),
           Text(
@@ -309,12 +309,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bb/Copper1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 1-Star Material, Clump of Copper Scraps will mainly appear in Max\'s Area (1-10F).'),
           Text(
@@ -343,12 +343,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a1/Copper2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 2-Star Material, Piece of Broken Copperware will mainly appear in Jackson\'s Area (11-20F).'),
           Text(
@@ -377,12 +377,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b9/Copper3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 3-Star Material, Copper Wire Mountain will mainly appear in Crowley\'s Area (21-30F).'),
           Text(
@@ -411,12 +411,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/83/Copper4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 4-Star Material, Pure Copper will mainly appear in Gunkanyama\'s Area (31-40F). Continues appearing until 100F in Tengoku.'),
           Text(
@@ -445,12 +445,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/67/Copper5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 5-Star Material, Oxygen-free Copper mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Copper-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
@@ -479,12 +479,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/72/Copper6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 6-Star Material, Beryllium Copper mainly appears above 41F+, on Copper-specific floors in Battle To The Top and Tengoku.'),
           Text(
@@ -504,12 +504,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/32/Copper7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Corinthian Bronze only appears on Copper-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -529,12 +529,12 @@ List<RnDMaterial> copper = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/1d/Copper8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Orichalcum can rarely appear in Tengoku on Copper-specific floors above 80F.'),
           Text(
@@ -558,12 +558,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/dc/Iron1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 1-Star Material, Iron Scraps will mainly appear in Max\'s Area (1-10F).'),
           Text(
@@ -592,12 +592,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7b/Iron2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 2-Star Material, Wire Mountain will mainly appear in Jackson\'s Area (11-20F).'),
           Text(
@@ -626,12 +626,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/aa/Iron3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 3-Star Material, Mass of Iron Bolts will mainly appear in Crowley\'s Area (21-30F).'),
           Text(
@@ -660,12 +660,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/01/Iron4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 4-Star Material, Steel will mainly appear in Gunkanyama\'s Area (31-40F). Continues appearing until 100F in Tengoku.'),
           Text(
@@ -694,12 +694,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/5a/Iron5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 5-Star Material, Ultra-pure Iron mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Iron-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
@@ -728,12 +728,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Iron6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 6-Star Material, Special Steel mainly appears above 41F+, on Iron-specific floors in Battle To The Top and Tengoku.'),
           Text(
@@ -753,12 +753,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fd/Iron7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Chrome-Moly only appears on Iron-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -778,12 +778,12 @@ List<RnDMaterial> iron = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/15/Iron8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Tamahagane can rarely appear in Tengoku on Iron-specific floors above 80F.'),
           Text(
@@ -806,12 +806,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f9/Oil1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 1-Star Material, Waste Oil will mainly appear in Max\'s Area (1-10F).'),
           Text(
@@ -840,12 +840,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d1/Oil2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 2-Star Material, Vegetable Oil will mainly appear in Jackson\'s Area (11-20F).'),
           Text(
@@ -874,12 +874,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2a/Oil3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 3-Star Material, Crude Oil will mainly appear in Crowley\'s Area (21-30F).'),
           Text(
@@ -908,12 +908,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/18/Oil4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 4-Star Material, Mineral Oil will mainly appear in Gunkanyama\'s Area (31-40F). Continues appearing until 100F in Tengoku.'),
           Text(
@@ -942,12 +942,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/ae/Oil5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 5-Star Material, Chemo-synthesized Oil mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Oil-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
@@ -976,12 +976,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/Oil6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 6-Star Material, Biofuel mainly appears above 41F+, on Oil-specific floors in Battle To The Top and Tengoku.'),
           Text(
@@ -1001,12 +1001,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/92/Oil7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Tiger Grease only appears on Oil-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -1026,12 +1026,12 @@ List<RnDMaterial> oil = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b0/Oil8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Fatback can rarely appear in Tengoku on Oil-specific floors above 80F.'),
           Text('Can be bought for 2500 Bloodnium in the Bloodnium Exchange.'),
@@ -1053,12 +1053,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4c/Wood1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 1-Star Material, Veneer Planks will mainly appear in Max\'s Area (1-10F).'),
           Text(
@@ -1087,12 +1087,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/9f/Wood2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 2-Star Material, MDF will mainly appear in Jackson\'s Area (11-20F).'),
           Text(
@@ -1121,12 +1121,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/18/Wood3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 3-Star Material, Rosewood will mainly appear in Crowley\'s Area (21-30F).'),
           Text(
@@ -1155,12 +1155,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/75/Wood4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 4-Star Material, Walnut will mainly appear in Gunkanyama\'s Area (31-40F). Continues appearing until 100F in Tengoku.'),
           Text(
@@ -1189,12 +1189,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/30/Wood5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 5-Star Material, Mahogany mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Wood-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
@@ -1223,12 +1223,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/51/Wood6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'As a 6-Star Material, Snake Wood mainly appears above 41F+, on Wood-specific floors in Battle To The Top and Tengoku.'),
           Text(
@@ -1248,12 +1248,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bf/Wood7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Black Coal only appears on Wood-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -1273,12 +1273,12 @@ List<RnDMaterial> wood = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0b/Wood8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Lignum Vitae only appears rarely on Wood-specific floors in Tengoku above 80F.'),
           Text('Can be bought for 2500 Bloodnium in the Bloodnium Exchange.\n'),
@@ -1300,12 +1300,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4a/Fiber1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Cotton can be found on any floor that can spawn Fiber materials in the Tower of Barbs, no matter how low or how high. Early Fiber-type materials are not limited by Star Rating, meaning Cotton, Hemp, Leather, Wool, and Silk can all appear together on any Fiber-specific floor, regardless of height. However, Cotton in particular is even more universal than the rest, as it will appear on All-material type floors as well, while the other Fibers will not. It will continue to appear even above 40F+, all the way to the top of the tower.'),
           Text(
@@ -1334,12 +1334,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a4/Fiber2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Hemp can be found on any Fiber-specific floor in the Tower of Barbs, no matter how low or how high. Early Fiber-type materials are not limited by Star Rating, meaning Cotton, Hemp, Leather, Wool, and Silk can all appear together on any Fiber floor, regardless of height. However, Fiber type materials besides Cotton and Carbon Fiber will not appear on any All-material floors. It will continue to appear even above 40F+, all the way to the top of the tower.'),
           Text(
@@ -1368,12 +1368,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/ac/Fiber3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Leather can be found on any Fiber-specific floor in the Tower of Barbs, no matter how low or how high. Early Fiber-type materials are not limited by Star Rating, meaning Cotton, Hemp, Leather, Wool, and Silk can all appear together on any Fiber floor, regardless of height. However, Fiber type materials besides Cotton and Carbon Fiber will not appear on any All-material floors. It will continue to appear even above 40F+, all the way to the top of the tower.'),
           Text(
@@ -1402,12 +1402,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ed/Fiber4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Wool can be found on any Fiber-specific floor in the Tower of Barbs, no matter how low or how high. Early Fiber-type materials are not limited by Star Rating, meaning Cotton, Hemp, Leather, Wool, and Silk can all appear together on any Fiber floor, regardless of height. However, Fiber type materials besides Cotton and Carbon Fiber will not appear on any All-material floors. It will continue to appear even above 40F+, all the way to the top of the tower.'),
           Text(
@@ -1436,12 +1436,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/5b/Fiber5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Silk can be found on any Fiber-specific floor in the Tower of Barbs, no matter how low or how high. Early Fiber-type materials are not limited by Star Rating, meaning Cotton, Hemp, Leather, Wool, and Silk can all appear together on any Fiber floor, regardless of height. However, Fiber type materials besides Cotton and Carbon Fiber will not appear on any All-material floors. It will continue to appear even above 40F+, all the way to the top of the tower.'),
           Text(
@@ -1470,12 +1470,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/cb/Fiber6.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Carbon Fiber can be found above 41F, in Battle To The Top and mainly Tengoku. Early Fiber-type materials are not limited by Star Rating, meaning you will also see Cotton, Hemp, Leather, Wool, and Silk continue to appear on these higher floors. Carbon Fiber in particular is more universal than the rest, as it will appear on All-material type floors as well, while the other Fibers will not. However, this is only possible within the 40\'s, and is very rare.'),
           Text(
@@ -1499,12 +1499,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/17/Fiber7.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Aramid Fiber only appears on Fiber-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
@@ -1524,12 +1524,12 @@ List<RnDMaterial> fiber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Fiber8.png/revision/latest',
     rarity: 8,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Polyarylate Fiber only appears rarely on Fiber-specific floors in Tengoku above 80F.'),
           Text('Can be bought for 2500 Bloodnium in the Bloodnium Exchange.\n'),
@@ -1551,12 +1551,12 @@ List<RnDMaterial> tuber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/73/Tuber1.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Scratch Metal drops rarely from Scratch Tuber type enemies, which means it can be found on any floor that spawns Scratch Tubers. Heimo-Jima on floor 6 is an excellent area to find Scratch Metal, as it contains around 25 Scratch Tubers in a single corridor from escalator to escalator. If Heimo-Jima is not in rotation, 19F Chitose-Mei is another good option. It can easily be reached from the elevator on 20F Hachiyanma and tends to have a group of 7-10 Scratch Tubers very close to an escalator - though this escalator isn\'t always going to be the one from Hachiyanma.'),
           Text(
@@ -1576,12 +1576,12 @@ List<RnDMaterial> tuber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/Tuber2.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Bullet Metal can be found on any floor as it is a rare drop from the Bullet Tuber type enemies.'),
           Text(
@@ -1603,12 +1603,12 @@ List<RnDMaterial> tuber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ea/Tuber3.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text('Hovering Metal can be found in the following locations:'),
           Text('- Rare drop from Hovering Tubers.'),
           Text('- Purchased from Gyakufunsha for 30,000 KC.'),
@@ -1626,12 +1626,12 @@ List<RnDMaterial> tuber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2b/Tuber4.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Bone Metal, like most Tuber Metals are obtained as a rare drop form Bone Tubers'),
           Text('It can also be purchased from Gyakufunsha for 40,000 KC.'),
@@ -1653,12 +1653,12 @@ List<RnDMaterial> tuber = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bd/Tuber5.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Reversal Metal can be found on any floor as it is a rare drop from the Reversal Tuber type enemies.'),
           Text(
@@ -1683,12 +1683,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/af/DOD_Blue.png/revision/latest',
     rarity: 1,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS Blue Metals drop from the D.O.D. ARMS Mid-Boss, COEN, on 3F TAMATA, and from their Don, Max Sharp, on 10F OMENO-SOTO. They may drop damaged D.O.D. ARMS equipment or Kill Coins instead.'),
           Text(
@@ -1754,12 +1754,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/29/DOD_Green.png/revision/latest',
     rarity: 2,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS Green Metals do not drop from a mid-boss, so they only naturally drop from Trap Rooms and Haters.'),
           Text(''),
@@ -1818,12 +1818,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a6/DOD_Black.png/revision/latest',
     rarity: 3,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS Black Metals drop from the D.O.D. ARMS Mid-Boss, COEN, on 26F OSHIMI. He may drop damaged D.O.D. ARMS equipment or Kill Coins instead.'),
           Text(''),
@@ -1932,12 +1932,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d0/DOD_Red.png/revision/latest',
     rarity: 4,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS Red Metals drop from the D.O.D. ARMS Mid-Boss, COEN, on 34F NITANDA. He may drop damaged D.O.D. ARMS equipment or Kill Coins instead.'),
           Text(''),
@@ -2028,12 +2028,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e9/DOD_Purple.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS Purple Metals start to drop in the Battle To The Top area (41F+), from Gold Chests in the Treasure Rooms on dead-end floors, or from Hardcore Haters. Typically, this means you have a chance at 1 Purple metal per run.'),
           Text(''),
@@ -2107,12 +2107,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b9/DOD_Orange.png/revision/latest',
     rarity: 6,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Orange Metals only appear in Tengoku. They can appear right away as a "rare" Legendary Chest reward, but become a "common" reward above 100F. They can appear as Gold Chest rewards at any point, and can drop directly from either Treasure Tubers or the corresponding faction Mid-Boss. Gold Chests from Hardcore Haters can drop them at any floor, but at a much, much lower rate.'),
           Text(''),
@@ -2136,12 +2136,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6c/DOD_Platinum.png/revision/latest',
     rarity: 7,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'Platinum Metals only appear in Tengoku, starting at 80F. They can appear as rare Legendary Chest rewards, and can also appear as Gold Chest rewards. At 80F or above, they can drop directly from either Treasure Tubers or the corresponding faction Mid-Boss. Gold Chests from Hardcore Haters can drop them above 80F, but at a much, much lower rate.'),
           Text(''),
@@ -2161,12 +2161,12 @@ List<RnDMaterial> dod = [
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/87/DOD_44CE.png/revision/latest',
     rarity: 5,
-    where: const SingleChildScrollView(
+    where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Text(
               'D.O.D. ARMS 44CE Metal can only drop from the D.O.D. ARMS Forcemen, White Steel, after defeating him on Nightmare difficulty on 8F KO-ONI. Forcemen may be fought for free on each difficulty once per day.'),
           Text(''),
