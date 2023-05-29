@@ -28,9 +28,9 @@ Map<String, List<RnDMaterial>> mats = {
   'tuber': tuber,
   'dod': dod,
   'we': we,
-  // 'cw': cw,
-  // 'milk': milk,
-  // 'jackal': jackal,
+  'cw': cw,
+  'milk': milk,
+  'jackal': jackal,
 };
 
 // -- Linha de texto para link --
@@ -3560,159 +3560,258 @@ List<RnDMaterial> milk = [
   ),
 ];
 
-// List<RnDMaterial> jackal = [
-//   RnDMaterial(
-//     name: 'Jackal X ID Card',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e0/IDX.png/revision/latest',
-//     rarity: 6,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Jackal Y ID Card',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/IDY.png/revision/latest',
-//     rarity: 6,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Jackal Z ID Card',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8e/IDZ.png/revision/latest',
-//     rarity: 6,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Sunflower Rare Metal',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a7/SunflowerM.png/revision/latest',
-//     rarity: 5,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Sunflower Rare Metal X',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/ca/SunflowerX.png/revision/latest',
-//     rarity: 7,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Sunflower Rare Metal Y',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/20/SunflowerY.png/revision/latest',
-//     rarity: 7,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Sunflower Rare Metal Z',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/SunflowerZ.png/revision/latest',
-//     rarity: 7,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Sunflower Rare Metal D',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/37/SunflowerD.png/revision/latest',
-//     rarity: 7,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Jackal X DNA Data',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fa/DNAX.png/revision/latest',
-//     rarity: 8,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Jackal Y DNA Data',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c2/DNAY.png/revision/latest',
-//     rarity: 8,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-//   RnDMaterial(
-//     name: 'Jackal Z DNA Data',
-//     url:
-//         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6f/DNAZ.png/revision/latest',
-//     rarity: 8,
-//     where: SingleChildScrollView(
-//       scrollDirection: Axis.vertical,
-//       child: Column(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: const [],
-//       ),
-//     ),
-//   ),
-// ];
+List<RnDMaterial> jackal = [
+  RnDMaterial(
+    name: 'Jackal X ID Card',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e0/IDX.png/revision/latest',
+    rarity: 6,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal X ID Cards are a rare drop from V2 Jackal X, who may be fought in the Battle To The Top area (42-49F). See Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('42F - 49F - Battle To The Top - EVERYDAY'),
+          Text('BOSS: V2 Jackal X'),
+          Text('Any non-Treasure/Shop Floor'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/x_id_card.png',
+  ),
+  RnDMaterial(
+    name: 'Jackal Y ID Card',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/IDY.png/revision/latest',
+    rarity: 6,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal Y ID Cards are a rare drop from V2 Jackal Y, who may be fought in the Battle To The Top area (42-49F). See Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('42F - 49F - Battle To The Top - EVERYDAY'),
+          Text('BOSS: V2 Jackal Y'),
+          Text('Any non-Treasure/Shop Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/y_id_card.png',
+  ),
+  RnDMaterial(
+    name: 'Jackal Z ID Card',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8e/IDZ.png/revision/latest',
+    rarity: 6,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal Z ID Cards are a rare drop from V2 Jackal Z, who may be fought in the Battle To The Top area (42-49F). See Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('42F - 49F - Battle To The Top - EVERYDAY'),
+          Text('BOSS: V2 Jackal Z'),
+          Text('Any non-Treasure/Shop Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/z_id_card.png',
+  ),
+  RnDMaterial(
+    name: 'Sunflower Rare Metal',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a7/SunflowerM.png/revision/latest',
+    rarity: 5,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Sunflower Rare Metals are a drop from the V2 Jackals, who may be fought in the Battle To The Top area (42-49F). See Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('42F - 49F - Battle To The Top - EVERYDAY'),
+          Text('BOSS: V2 Jackals'),
+          Text('Any non-Treasure/Shop Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/sunflower.png',
+  ),
+  RnDMaterial(
+    name: 'Sunflower Rare Metal X',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/ca/SunflowerX.png/revision/latest',
+    rarity: 7,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Sunflower Rare Metal X is a drop from Awakened (V3) Jackal X, who may be fought in TENGOKU between 52-99F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('52F - 99F - TENGOKU - EVERYDAY'),
+          Text('BOSS: Awakened (V3) Jackal X'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/sunflower_X.png',
+  ),
+  RnDMaterial(
+    name: 'Sunflower Rare Metal Y',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/20/SunflowerY.png/revision/latest',
+    rarity: 7,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Sunflower Rare Metal Y is a drop from Awakened (V3) Jackal Y, who may be fought in TENGOKU between 52-99F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('52F - 99F - TENGOKU - ALL'),
+          Text('BOSS: Awakened (V3) Jackal Y'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/sunflower_y.png',
+  ),
+  RnDMaterial(
+    name: 'Sunflower Rare Metal Z',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/SunflowerZ.png/revision/latest',
+    rarity: 7,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Sunflower Rare Metal Z is a drop from Awakened (V3) Jackal Z, who may be fought in TENGOKU between 52-99F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('52F - 99F - TENGOKU - EVERYDAY'),
+          Text('BOSS: Awakened (V3) Jackal Z'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/sunflower_Z.png',
+  ),
+  RnDMaterial(
+    name: 'Sunflower Rare Metal D',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/37/SunflowerD.png/revision/latest',
+    rarity: 7,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Sunflower Rare Metal D drops from the Awakened (V4) Jackals, who may be fought in TENGOKU above 100F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('101F+ - TENGOKU'),
+          Text('BOSS: Awakened (V4) Jackals'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/sunflower_D.png',
+  ),
+  RnDMaterial(
+    name: 'Jackal X DNA Data',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fa/DNAX.png/revision/latest',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal X DNA Data is a rare drop from Awakened (V4) Jackal X, who may be fought in TENGOKU above 100F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('101F+ - TENGOKU'),
+          Text('BOSS: Awakened (V4) Jackal X'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/x_dna.png',
+  ),
+  RnDMaterial(
+    name: 'Jackal Y DNA Data',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c2/DNAY.png/revision/latest',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal Y DNA Data is a rare drop from Awakened (V4) Jackal Y, who may be fought in TENGOKU above 100F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('101F+ - TENGOKU'),
+          Text('BOSS: Awakened (V4) Jackal Y'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/y_dna.png',
+  ),
+  RnDMaterial(
+    name: 'Jackal Z DNA Data',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6f/DNAZ.png/revision/latest',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Jackal Z DNA Data is a rare drop from Awakened (V4) Jackal Z, who may be fought in TENGOKU above 100F. See Awakened Jackals for strategy information.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('101F+ - TENGOKU'),
+          Text('BOSS: Awakened (V4) Jackal Z'),
+          Text('Any non-Boss Floor.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/z_dna.png',
+  ),
+];
