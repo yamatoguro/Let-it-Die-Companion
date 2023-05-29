@@ -31,6 +31,7 @@ Map<String, List<RnDMaterial>> mats = {
   'cw': cw,
   'milk': milk,
   'jackal': jackal,
+  'roids': roids,
 };
 
 // -- Linha de texto para link --
@@ -3813,5 +3814,113 @@ List<RnDMaterial> jackal = [
       ),
     ),
     urlFullImage: '../assets/images/z_dna.png',
+  ),
+];
+
+List<RnDMaterial> roids = [
+  RnDMaterial(
+    name: 'Blue Death \'Roids',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/80/DRBlue.png/revision/latest?cb=20190129214823',
+    rarity: 1,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Death \'roids are obtainable within the floor of TENGOKU. They may be found in a challenge room (whether as a reward or dropped by a treasure tuber) or from a treasure chest dropped by "red named haters"'),
+          Text(''),
+          Text(
+              'Death \'Roids may also be obtained from the Hernia Vending Machine using its Bloodnium Exchange option.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/blue_roid.png',
+  ),
+  RnDMaterial(
+    name: 'Green Death \'Roids',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/19/DRGreen.png/revision/latest?cb=20190129214843',
+    rarity: 2,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Death \'roids are obtainable within the floor of TENGOKU. They may be found in a challenge room (whether as a reward or dropped by a treasure tuber) or from a treasure chest dropped by "red named haters"'),
+          Text(''),
+          Text(
+              'Death \'Roids may also be obtained from the Hernia Vending Machine using its Bloodnium Exchange option.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/green_roid.png',
+  ),
+  RnDMaterial(
+    name: 'Black Death \'Roids',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/66/DRBlack.png/revision/latest?cb=20190129214904',
+    rarity: 3,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Death \'roids are obtainable within the floor of TENGOKU. They may be found in a challenge room (whether as a reward or dropped by a treasure tuber) or from a treasure chest dropped by "red named haters"'),
+          Text(''),
+          Text(
+              'Death \'Roids may also be obtained from the Hernia Vending Machine using its Bloodnium Exchange option.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/black_roid.png',
+  ),
+  RnDMaterial(
+    name: 'Red Death \'Roids',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/23/DRRed.png/revision/latest?cb=20190129214947',
+    rarity: 4,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Death \'roids are obtainable within the floor of TENGOKU. They may be found in a challenge room (whether as a reward or dropped by a treasure tuber) or from a treasure chest dropped by "red named haters"'),
+          Text(''),
+          Text(
+              'Death \'Roids may also be obtained from the Hernia Vending Machine using its Bloodnium Exchange option.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/red_roid.png',
+  ),
+  RnDMaterial(
+    name: 'Purple Death \'Roids',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d8/DRPurple.png/revision/latest?cb=20190129215014',
+    rarity: 5,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Death \'roids are obtainable within the floor of TENGOKU. They may be found in a challenge room (whether as a reward or dropped by a treasure tuber) or from a treasure chest dropped by "red named haters"'),
+          Text(''),
+          Text(
+              'Death \'Roids may also be obtained from the Hernia Vending Machine using its Bloodnium Exchange option.'),
+        ],
+      ),
+    ),
+    urlFullImage: '../assets/images/purple_roid.png',
   ),
 ];
