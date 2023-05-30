@@ -64,7 +64,8 @@ class _RnDFormState extends State<RnDForm> {
                 'War Ensemble Rare Metal',
                 'Candle Wolf Rare Metal',
                 'M.I.L.K. Rare Metal',
-                "Jackal's Materials",
+                'Jackal\'s Materials',
+                'Death \'Roids',
               ].map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -177,8 +178,10 @@ class _RnDFormState extends State<RnDForm> {
         return 'cw';
       case 'M.I.L.K. Rare Metal':
         return 'milk';
-      case "Jackal's Materials":
+      case 'Jackal\'s Materials':
         return 'jackal';
+      case 'Death \'Roids':
+        return 'roids';
       default:
         return 'aluminum';
     }
