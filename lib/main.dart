@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lid_companion/screens/dashboard.dart';
 import 'package:lid_companion/screens/farm_control.dart';
 
 void main() {

@@ -3,6 +3,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:lid_companion/components/dialog_item_info.dart';
 import 'package:lid_companion/materials_data.dart';
 
 class ItemMaterial extends StatefulWidget {
@@ -32,7 +33,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
       groupTag: "Material",
       dragStartBehavior: DragStartBehavior.start,
       endActionPane: ActionPane(
-        extentRatio: 0.15,
+        extentRatio: 0.25,
         motion: const ScrollMotion(),
         children: [
           SlidableAction(
@@ -40,6 +41,18 @@ class _ItemMaterialState extends State<ItemMaterial> {
               widget.delete(widget.material);
             },
             icon: Icons.delete_forever,
+            autoClose: true,
+            backgroundColor: Colors.transparent,
+          ),
+          SlidableAction(
+            onPressed: (context) {
+              showDialog(
+                context: context,
+                builder: ((contextDialog) =>
+                    DialogItemInfo(material: widget.material)),
+              );
+            },
+            icon: Icons.info_outline_rounded,
             autoClose: true,
             backgroundColor: Colors.transparent,
           ),
@@ -60,7 +73,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
           trailing: Wrap(
             children: [
               Text(
-                widget.current.toString() + '/' + widget.quantity.toString(),
+                '${widget.current}/${widget.quantity}',
                 style: const TextStyle(fontSize: 22, height: 2),
               ),
               IconButton(

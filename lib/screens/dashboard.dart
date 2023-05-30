@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lid_companion/components/dialog_select_recipe.dart';
 import 'package:lid_companion/screens/farm_control.dart';
+import 'package:lid_companion/screens/farm_recipe.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -61,15 +63,23 @@ class Dashboard extends StatelessWidget {
                 Card(
                   color: Colors.grey[800]!.withOpacity(0.8),
                   child: ListTile(
-                    leading: Image.asset('assets/images/IconMaterials.png'),
-                    title: const Text('Cake List'),
-                    subtitle: const Text('Control your farm as you wish'),
+                    leading: Image.asset('assets/images/IconBP.png'),
+                    title: const Text('Cake Recipe'),
+                    subtitle:
+                        const Text('Control your farm using R&D requirement'),
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const FarmControl(),
-                          ));
+                      Future future = showDialog(
+                        context: context,
+                        builder: ((contextDialog) =>
+                            const DialogSelectRecipe()),
+                      );
+                      future.then((value) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const FarmRecipe(),
+                            ));
+                      });
                     },
                   ),
                 )
