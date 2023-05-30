@@ -23,12 +23,32 @@ class _FarmControlState extends State<FarmControl> {
       if (value != null) {
         var v =
             ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
-        materials.add(ItemMaterial(
+
+        ItemMaterial newItem = ItemMaterial(
           material: mats[v.matType]![v.mat],
           quantity: v.qtd.toString(),
           delete: removeItem,
           edit: editItem,
-        ));
+        );
+        if (materials.any(
+            (item) => (item as ItemMaterial).material == newItem.material)) {
+          var item = materials
+              .where((e) =>
+                  (e as ItemMaterial).material.name == newItem.material.name)
+              .first;
+          newItem = ItemMaterial(
+            material: mats[v.matType]![v.mat],
+            quantity: (int.parse((item as ItemMaterial).quantity) +
+                    int.parse(newItem.quantity))
+                .toString(),
+            delete: removeItem,
+            edit: editItem,
+          );
+          materials.remove(item);
+          materials.add(newItem);
+        } else {
+          materials.add(newItem);
+        }
         setState(() => {});
       }
     });
@@ -48,35 +68,20 @@ class _FarmControlState extends State<FarmControl> {
       var item = materials
           .where((e) => (e as ItemMaterial).material == material)
           .first;
+
       materials.remove(item);
     });
   }
 
   List<Widget> materials = [
-    ItemMaterial(material: mats['tuber']![3], quantity: '2'),
-    ItemMaterial(material: mats['dod']![7], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![5], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![6], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![7], quantity: '2'),
-    // ItemMaterial(material: mats['copper']![0], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![1], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![2], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![3], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![4], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![5], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![6], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![7], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![0], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![1], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![2], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![3], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![4], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![5], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![6], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![7], quantity: '250'),
+    // ItemMaterial(material: mats['tuber']![3], quantity: '2'),
+    // ItemMaterial(material: mats['dod']![7], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![5], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![6], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![7], quantity: '2'),
   ];
 
   @override

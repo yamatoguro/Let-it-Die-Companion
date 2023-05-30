@@ -2650,7 +2650,8 @@ List<RnDMaterial> we = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/war_ensemble_44ce.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/war_ensemble_44ce.png',
   ),
 ];
 
@@ -3108,7 +3109,8 @@ List<RnDMaterial> cw = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/candle-wolf_44ce.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/candle-wolf_44ce.png',
   ),
 ];
 
@@ -3557,7 +3559,8 @@ List<RnDMaterial> milk = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/milk_44ce.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/milk_44ce.png',
   ),
 ];
 
@@ -3583,7 +3586,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/x_id_card.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/x_id_card.png',
   ),
   RnDMaterial(
     name: 'Jackal Y ID Card',
@@ -3606,7 +3610,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/y_id_card.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/y_id_card.png',
   ),
   RnDMaterial(
     name: 'Jackal Z ID Card',
@@ -3629,7 +3634,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/z_id_card.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/z_id_card.png',
   ),
   RnDMaterial(
     name: 'Sunflower Rare Metal',
@@ -3652,7 +3658,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/sunflower.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower.png',
   ),
   RnDMaterial(
     name: 'Sunflower Rare Metal X',
@@ -3675,7 +3682,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/sunflower_X.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_X.png',
   ),
   RnDMaterial(
     name: 'Sunflower Rare Metal Y',
@@ -3698,7 +3706,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/sunflower_y.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_y.png',
   ),
   RnDMaterial(
     name: 'Sunflower Rare Metal Z',
@@ -3721,7 +3730,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/sunflower_Z.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_Z.png',
   ),
   RnDMaterial(
     name: 'Sunflower Rare Metal D',
@@ -3744,7 +3754,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/sunflower_D.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_D.png',
   ),
   RnDMaterial(
     name: 'Jackal X DNA Data',
@@ -3767,7 +3778,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/x_dna.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/x_dna.png',
   ),
   RnDMaterial(
     name: 'Jackal Y DNA Data',
@@ -3790,7 +3802,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/y_dna.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/y_dna.png',
   ),
   RnDMaterial(
     name: 'Jackal Z DNA Data',
@@ -3813,7 +3826,8 @@ List<RnDMaterial> jackal = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/z_dna.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/z_dna.png',
   ),
 ];
 
@@ -3837,7 +3851,8 @@ List<RnDMaterial> roids = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/blue_roid.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/blue_roid.png',
   ),
   RnDMaterial(
     name: 'Green Death \'Roids',
@@ -3858,7 +3873,8 @@ List<RnDMaterial> roids = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/green_roid.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/green_roid.png',
   ),
   RnDMaterial(
     name: 'Black Death \'Roids',
@@ -3879,7 +3895,8 @@ List<RnDMaterial> roids = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/black_roid.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/black_roid.png',
   ),
   RnDMaterial(
     name: 'Red Death \'Roids',
@@ -3900,7 +3917,8 @@ List<RnDMaterial> roids = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/red_roid.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/red_roid.png',
   ),
   RnDMaterial(
     name: 'Purple Death \'Roids',
@@ -3921,6 +3939,7 @@ List<RnDMaterial> roids = [
         ],
       ),
     ),
-    urlFullImage: '../assets/images/purple_roid.png',
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/purple_roid.png',
   ),
 ];
