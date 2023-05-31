@@ -33,7 +33,7 @@ class _RnDFormState extends State<RnDForm> {
               value: matType,
               icon: const Icon(Icons.arrow_drop_down),
               elevation: 24,
-              style: const TextStyle(color: Colors.white, fontSize: 24),
+              style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
                   debugPrint(newValue);
@@ -71,7 +71,6 @@ class _RnDFormState extends State<RnDForm> {
                   value: value,
                   child: Text(
                     value,
-                    style: const TextStyle(color: Colors.white),
                   ),
                 );
               }).toList(),
@@ -85,7 +84,7 @@ class _RnDFormState extends State<RnDForm> {
               value: mat,
               icon: const Icon(Icons.arrow_drop_down),
               elevation: 24,
-              style: const TextStyle(color: Colors.white, fontSize: 24),
+              style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
                   mat = newValue!;
@@ -94,10 +93,7 @@ class _RnDFormState extends State<RnDForm> {
               items: materials.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(
-                    value,
-                    style: const TextStyle(color: Colors.white),
-                  ),
+                  child: Text(value),
                 );
               }).toList(),
             ),

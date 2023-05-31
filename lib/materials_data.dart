@@ -225,7 +225,7 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_EVERYDAYoy_7075.jpg/revision/latest?cb=20181111020020',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_Alloy_7075.jpg/revision/latest?cb=20181111020020',
   ),
   RnDMaterial(
     name: 'Aluminum EVERYDAYoy 9048',
@@ -250,7 +250,7 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_EVERYDAYoy_9048.jpg/revision/latest?cb=20181111021649',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_Alloy_9048.jpg/revision/latest?cb=20181111021649',
   ),
   RnDMaterial(
     name: 'Aluminum EVERYDAYoy 9050',
@@ -275,7 +275,7 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_EVERYDAYoy_9050.jpg/revision/latest?cb=20181111022709',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_Alloy_9050.jpg/revision/latest?cb=20181111022709',
   ),
   RnDMaterial(
     name: 'Aluminum EVERYDAYoy 9051',
@@ -300,7 +300,7 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_EVERYDAYoy_9051.jpg/revision/latest?cb=20181129150501',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_Alloy_9051.jpg/revision/latest?cb=20181129150501',
   ),
 ];
 
