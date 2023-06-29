@@ -3,6 +3,11 @@ import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/components/item_material.dart';
+import 'package:lid_companion/screens/info_screen.dart';
+import 'package:lid_companion/service/database_service.dart';
+
+import '../models/cake_item.dart';
+import '../models/rnd_material.dart';
 
 class FarmControl extends StatefulWidget {
   const FarmControl({Key? key}) : super(key: key);
@@ -14,12 +19,46 @@ class FarmControl extends StatefulWidget {
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
 
+  _loadItems() async {
+    List<CakeItem> items = await DatabaseService.cakeItems();
+    debugPrint(items.length.toString());
+    if (items.isNotEmpty) {
+      for (CakeItem e in items) {
+        ItemMaterial newItem = ItemMaterial(
+          material: mats[e.type]![e.rarity],
+          quantity: e.quantity.toString(),
+          delete: removeItem,
+          edit: editItem,
+        );
+        materials.add(newItem);
+        debugPrint(newItem.material.name);
+      }
+      setState(() => {});
+    } // else {
+    //   var ci = CakeItem(
+    //     id: 0,
+    //     type: 'tuber',
+    //     rarity: 3,
+    //     quantity: 2,
+    //   );
+    //   ItemMaterial newItem = ItemMaterial(
+    //     material: mats[ci.type]![ci.rarity],
+    //     quantity: ci.quantity.toString(),
+    //     delete: removeItem,
+    //     edit: editItem,
+    //   );
+    //   await DatabaseService.insertCakeItem(ci);
+    //   materials.add(newItem);
+    //   setState(() {});
+    // }
+  }
+
   _addItem() {
     final Future future = Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => RnDForm()),
     );
-    future.then((value) {
+    future.then((value) async {
       if (value != null) {
         var v =
             ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
@@ -46,21 +85,31 @@ class _FarmControlState extends State<FarmControl> {
           );
           materials.remove(item);
           materials.add(newItem);
+          await DatabaseService.updateCakeItem(
+              CakeItem(null, type: v.matType, rarity: v.mat, quantity: v.qtd));
         } else {
           materials.add(newItem);
+          await DatabaseService.insertCakeItem(
+              CakeItem(null, type: v.matType, rarity: v.mat, quantity: v.qtd));
         }
-        setState(() => {});
+        setState(() => {debugPrint(materials.first.toString())});
       }
     });
   }
 
-  removeItem(material) {
-    setState(() {
-      var item = materials
-          .where((e) => (e as ItemMaterial).material == material)
-          .first;
-      materials.remove(item);
-    });
+  removeItem(material) async {
+    ItemMaterial item = materials
+        .where((e) => (e as ItemMaterial).material == material)
+        .first as ItemMaterial;
+    await DatabaseService.deleteCakeItem(CakeItem(null,
+            type: item.material.type,
+            rarity: item.material.rarity,
+            quantity: item.material.quantity))
+        .then((value) => debugPrint('Exclusão'));
+    List<CakeItem> items = await DatabaseService.cakeItems();
+    debugPrint(items.length.toString());
+    materials.remove(item);
+    setState(() {});
   }
 
   editItem(material) {
@@ -74,45 +123,37 @@ class _FarmControlState extends State<FarmControl> {
   }
 
   List<Widget> materials = [
-    ItemMaterial(material: mats['tuber']![3], quantity: '2'),
-    ItemMaterial(material: mats['dod']![7], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![5], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![6], quantity: '2'),
-    ItemMaterial(material: mats['aluminum']![7], quantity: '2'),
+    // ItemMaterial(material: mats['tuber']![3], quantity: '2'),
+    // ItemMaterial(material: mats['dod']![7], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![5], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![6], quantity: '2'),
+    // ItemMaterial(material: mats['aluminum']![7], quantity: '2'),
   ];
 
   @override
   Widget build(BuildContext context) {
+    if (materials.isEmpty) {
+      _loadItems();
+    }
     return Scaffold(
       appBar: AppBar(
         title: const Text('Let it Die Companion'),
-        actions: const [
-          // IconButton(
-          //   onPressed: () {
-          //     _addItem();
-          //   },
-          //   icon: const Icon(Icons.add_circle_outline_outlined),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.all(10.0),
-          //   child: OutlinedButton(
-          //     style: OutlinedButton.styleFrom(
-          //       shape: const CircleBorder(),
-          //       padding: const EdgeInsets.all(0),
-          //       side: const BorderSide(
-          //         color: Colors.deepPurpleAccent,
-          //         width: 2.0,
-          //       ),
-          //     ),
-          //     onPressed: () {
-          //       _addItem();
-          //     },
-          //     child: const Icon(Icons.add),
-          //   ),
-          // ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.help_outline,
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const InfoScreen(),
+                  ));
+            },
+          ),
         ],
       ),
       body: Container(

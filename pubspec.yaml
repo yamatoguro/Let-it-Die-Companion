@@ -17,6 +17,8 @@ dependencies:
   flutter_slidable: ^2.0.0
   flutter_launcher_icons: ^0.8.1
   url_launcher: ^6.1.10
+  sqflite: ^2.2.8+4
+  path: ^1.8.2
 
 dev_dependencies:
   flutter_test:

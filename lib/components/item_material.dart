@@ -4,7 +4,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:lid_companion/components/dialog_item_info.dart';
-import 'package:lid_companion/materials_data.dart';
+
+import '../models/rnd_material.dart';
 
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;

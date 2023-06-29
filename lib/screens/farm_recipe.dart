@@ -4,6 +4,8 @@ import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/components/item_material.dart';
 
+import '../models/rnd_material.dart';
+
 class FarmRecipe extends StatefulWidget {
   const FarmRecipe({Key? key}) : super(key: key);
 

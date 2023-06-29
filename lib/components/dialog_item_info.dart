@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:lid_companion/materials_data.dart';
+import '../models/rnd_material.dart';
 
 class DialogItemInfo extends StatelessWidget {
   final String buttonText;
