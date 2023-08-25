@@ -1,14 +1,16 @@
 class CakeItem {
-  int? id;
+  int id;
   String type;
   int rarity;
   int quantity;
+  int current;
 
-  CakeItem(
-    this.id, {
+  CakeItem({
+    required this.id,
     required this.type,
     required this.rarity,
     required this.quantity,
+    required this.current,
   });
 
   Map<String, dynamic> toMap() {
@@ -17,11 +19,12 @@ class CakeItem {
       'type': type,
       'rarity': rarity,
       'quantity': quantity,
+      'current': current,
     };
   }
 
   @override
   String toString() {
-    return 'CakeItem{id: $id, type: $type, rarity: $rarity, quantity: $quantity}';
+    return 'CakeItem{id: $id, type: $type, rarity: $rarity, quantity: $quantity, current: $current}';
   }
 }

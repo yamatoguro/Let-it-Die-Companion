@@ -8,6 +8,7 @@ import 'package:lid_companion/components/dialog_item_info.dart';
 import '../models/rnd_material.dart';
 
 class ItemMaterial extends StatefulWidget {
+  final int id;
   final RnDMaterial material;
   num current = 0;
   final String quantity;
@@ -16,8 +17,10 @@ class ItemMaterial extends StatefulWidget {
 
   ItemMaterial(
       {Key? key,
+      required this.id,
       required this.material,
       required this.quantity,
+      required this.current,
       this.delete,
       this.edit})
       : super(key: key);
@@ -79,14 +82,16 @@ class _ItemMaterialState extends State<ItemMaterial> {
               ),
               IconButton(
                   icon: const Icon(Icons.add),
-                  onPressed: () {
+                  onPressed: () async {
                     widget.current++;
+                    await widget.edit(widget.material, true);
                     setState(() {});
                   }),
               IconButton(
                   icon: const Icon(Icons.remove),
-                  onPressed: () {
+                  onPressed: () async {
                     widget.current--;
+                    await widget.edit(widget.material, false);
                     setState(() {});
                   }),
             ],

@@ -21,36 +21,20 @@ class _FarmControlState extends State<FarmControl> {
 
   _loadItems() async {
     List<CakeItem> items = await DatabaseService.cakeItems();
-    debugPrint(items.length.toString());
     if (items.isNotEmpty) {
       for (CakeItem e in items) {
         ItemMaterial newItem = ItemMaterial(
-          material: mats[e.type]![e.rarity],
+          id: e.id,
+          material: mats[e.type]![e.rarity - 1],
           quantity: e.quantity.toString(),
           delete: removeItem,
           edit: editItem,
+          current: e.current,
         );
         materials.add(newItem);
-        debugPrint(newItem.material.name);
       }
       setState(() => {});
-    } // else {
-    //   var ci = CakeItem(
-    //     id: 0,
-    //     type: 'tuber',
-    //     rarity: 3,
-    //     quantity: 2,
-    //   );
-    //   ItemMaterial newItem = ItemMaterial(
-    //     material: mats[ci.type]![ci.rarity],
-    //     quantity: ci.quantity.toString(),
-    //     delete: removeItem,
-    //     edit: editItem,
-    //   );
-    //   await DatabaseService.insertCakeItem(ci);
-    //   materials.add(newItem);
-    //   setState(() {});
-    // }
+    }
   }
 
   _addItem() {
@@ -60,12 +44,14 @@ class _FarmControlState extends State<FarmControl> {
     );
     future.then((value) async {
       if (value != null) {
-        var v =
-            ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
+        var v = ReturnValue(
+            matType: value.matType, rarity: value.rarity, qtd: value.qtd);
 
         ItemMaterial newItem = ItemMaterial(
-          material: mats[v.matType]![v.mat],
+          id: DatabaseService.getID(mats[v.matType]![v.rarity]),
+          material: mats[v.matType]![v.rarity - 1],
           quantity: v.qtd.toString(),
+          current: 0,
           delete: removeItem,
           edit: editItem,
         );
@@ -76,23 +62,32 @@ class _FarmControlState extends State<FarmControl> {
                   (e as ItemMaterial).material.name == newItem.material.name)
               .first;
           newItem = ItemMaterial(
-            material: mats[v.matType]![v.mat],
+            id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
+            material: mats[v.matType]![v.rarity],
             quantity: (int.parse((item as ItemMaterial).quantity) +
                     int.parse(newItem.quantity))
                 .toString(),
+            current: item.current,
             delete: removeItem,
             edit: editItem,
           );
           materials.remove(item);
           materials.add(newItem);
-          await DatabaseService.updateCakeItem(
-              CakeItem(null, type: v.matType, rarity: v.mat, quantity: v.qtd));
+          await DatabaseService.updateCakeItem(CakeItem(
+              id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
+              type: v.matType,
+              rarity: v.rarity,
+              quantity: v.qtd,
+              current: item.current as int));
         } else {
           materials.add(newItem);
-          await DatabaseService.insertCakeItem(
-              CakeItem(null, type: v.matType, rarity: v.mat, quantity: v.qtd));
+          await DatabaseService.insertCakeItem(CakeItem(
+              id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
+              type: v.matType,
+              rarity: v.rarity,
+              quantity: v.qtd,
+              current: 0));
         }
-        setState(() => {debugPrint(materials.first.toString())});
       }
     });
   }
@@ -101,25 +96,28 @@ class _FarmControlState extends State<FarmControl> {
     ItemMaterial item = materials
         .where((e) => (e as ItemMaterial).material == material)
         .first as ItemMaterial;
-    await DatabaseService.deleteCakeItem(CakeItem(null,
+    await DatabaseService.deleteCakeItem(CakeItem(
+            id: item.id,
             type: item.material.type,
             rarity: item.material.rarity,
-            quantity: item.material.quantity))
-        .then((value) => debugPrint('Exclusão'));
+            quantity: int.parse(item.quantity),
+            current: 0))
+        .then((value) => materials.remove(item));
     List<CakeItem> items = await DatabaseService.cakeItems();
-    debugPrint(items.length.toString());
-    materials.remove(item);
     setState(() {});
   }
 
-  editItem(material) {
-    setState(() {
-      var item = materials
-          .where((e) => (e as ItemMaterial).material == material)
-          .first;
-
-      materials.remove(item);
-    });
+  editItem(material, bool add) async {
+    ItemMaterial item = materials
+        .where((e) => (e as ItemMaterial).material == material)
+        .first as ItemMaterial;
+    await DatabaseService.updateCakeItem(CakeItem(
+            id: item.id,
+            type: item.material.type,
+            rarity: item.material.rarity,
+            quantity: int.parse(item.quantity),
+            current: item.current as int))
+        .then((value) => setState(() {}));
   }
 
   List<Widget> materials = [
@@ -212,19 +210,24 @@ class _FarmControlState extends State<FarmControl> {
                         );
                         future.then((value) {
                           setState(() {
-                            List<Widget> mats = materials
+                            List<Widget> matsList = materials
                                 .where((e) =>
                                     int.parse((e as ItemMaterial).quantity) >
                                     e.current)
                                 .toList();
                             materials = [];
-                            for (var e in mats) {
+                            for (var e in matsList) {
                               num quantity =
                                   int.parse((e as ItemMaterial).quantity) -
                                       e.current;
                               RnDMaterial m = e.material;
                               e = ItemMaterial(
-                                  material: m, quantity: quantity.toString());
+                                id: DatabaseService.getID(
+                                    mats[m.type]![m.rarity]),
+                                material: m,
+                                quantity: quantity.toString(),
+                                current: e.current,
+                              );
                               materials.add(e);
                             }
                           });
@@ -242,11 +245,6 @@ class _FarmControlState extends State<FarmControl> {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () => _addItem(),
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }

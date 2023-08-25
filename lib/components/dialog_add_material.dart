@@ -36,8 +36,6 @@ class _RnDFormState extends State<RnDForm> {
               style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
-                  debugPrint(newValue);
-
                   if (newValue != null) {
                     String type = processMatType(newValue);
                     matType = newValue;
@@ -48,7 +46,6 @@ class _RnDFormState extends State<RnDForm> {
                     for (var item in list) {
                       materials.add(item.name);
                     }
-                    debugPrint(materials.toString());
                   }
                 });
               },
@@ -121,7 +118,7 @@ class _RnDFormState extends State<RnDForm> {
                       context,
                       ReturnValue(
                         matType: processMatType(matType),
-                        mat: processMat(mat),
+                        rarity: processMat(mat),
                         qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
@@ -186,8 +183,8 @@ class _RnDFormState extends State<RnDForm> {
 
 class ReturnValue {
   final String matType;
-  final int mat;
+  final int rarity;
   final int qtd;
 
-  ReturnValue({required this.matType, required this.mat, required this.qtd});
+  ReturnValue({required this.matType, required this.rarity, required this.qtd});
 }

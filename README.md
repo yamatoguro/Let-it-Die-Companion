@@ -22,6 +22,7 @@
 
 ## 📝 Table of Contents
 
+- [📝 Table of Contents](#-table-of-contents)
 - [🧐 About ](#-about-)
 - [🏁 Getting Started ](#-getting-started-)
 - [✍️ Authors ](#️-authors-)
@@ -48,4 +49,5 @@ To fork this project just use ```flutter pub get``` to get all packages and do w
 - Some people made this possible, as I show bellow:
   - [Kaito](https://twitter.com/LID_Kaito)
   - [Dynamo](https://www.twitch.tv/DynamoGamer8500)
-  - [Gatopretoo]()
+  - [Gatopretoo](https://www.instagram.com/gatopretoo_)
+  - [Gu1s4k_AK-45](https://www.instagram.com/Gui_sakimura/)

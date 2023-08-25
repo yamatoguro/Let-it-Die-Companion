@@ -112,29 +112,29 @@ class Dashboard extends StatelessWidget {
                     },
                   ),
                 ),
-                Card(
-                  color: Colors.grey[800]!.withOpacity(0.8),
-                  child: ListTile(
-                    leading: Image.asset('assets/images/IconBP.png'),
-                    title: const Text('Cake Recipe'),
-                    subtitle:
-                        const Text('Control your farm using R&D requirement'),
-                    onTap: () {
-                      Future future = showDialog(
-                        context: context,
-                        builder: ((contextDialog) =>
-                            const DialogSelectRecipe()),
-                      );
-                      future.then((value) {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const FarmRecipe(),
-                            ));
-                      });
-                    },
-                  ),
-                ),
+                // Card(
+                //   color: Colors.grey[800]!.withOpacity(0.8),
+                //   child: ListTile(
+                //     leading: Image.asset('assets/images/IconBP.png'),
+                //     title: const Text('Cake Recipe'),
+                //     subtitle:
+                //         const Text('Control your farm using R&D requirement'),
+                //     onTap: () {
+                //       Future future = showDialog(
+                //         context: context,
+                //         builder: ((contextDialog) =>
+                //             const DialogSelectRecipe()),
+                //       );
+                //       future.then((value) {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (context) => const FarmRecipe(),
+                //             ));
+                //       });
+                //     },
+                //   ),
+                // ),
               ],
             ),
           ),
