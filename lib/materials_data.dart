@@ -1,22 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'models/rnd_material.dart';
 // import 'package:url_launcher/url_launcher.dart';
-
-class RnDMaterial {
-  final String name;
-  final String url;
-  final String urlFullImage;
-  final int rarity;
-  int quantity = 0;
-  final SingleChildScrollView where;
-
-  RnDMaterial({
-    required this.name,
-    required this.url,
-    required this.urlFullImage,
-    required this.rarity,
-    required this.where,
-  });
-}
 
 Map<String, List<RnDMaterial>> mats = {
   'aluminum': aluminum,
@@ -57,6 +42,7 @@ Map<String, List<RnDMaterial>> mats = {
 
 List<RnDMaterial> aluminum = [
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum Scraps',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d5/Aluminum1.png/revision/latest',
@@ -92,6 +78,7 @@ List<RnDMaterial> aluminum = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/54/Aluminum_Scraps.jpg/revision/latest?cb=20181111000622',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum Can',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0d/Aluminum2.png/revision/latest',
@@ -126,6 +113,7 @@ List<RnDMaterial> aluminum = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/97/Aluminum_Can.jpg/revision/latest?cb=20181111005639',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum Engine Part',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/02/Aluminum3.png/revision/latest',
@@ -160,6 +148,7 @@ List<RnDMaterial> aluminum = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/dd/Aluminum_Engine_Part.jpg/revision/latest?cb=20181111011736',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Pure Aluminum',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8f/Aluminum4.png/revision/latest',
@@ -194,6 +183,7 @@ List<RnDMaterial> aluminum = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ee/Pure_Aluminum.jpg/revision/latest?cb=20181111012813',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum EVERYDAYoy 7075',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f1/Aluminum5.png/revision/latest',
@@ -225,9 +215,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_EVERYDAYoy_7075.jpg/revision/latest?cb=20181111020020',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_Alloy_7075.jpg/revision/latest?cb=20181111020020',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum EVERYDAYoy 9048',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7b/Aluminum6.png/revision/latest',
@@ -250,9 +241,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_EVERYDAYoy_9048.jpg/revision/latest?cb=20181111021649',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_Alloy_9048.jpg/revision/latest?cb=20181111021649',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum EVERYDAYoy 9050',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b8/Aluminum7.png/revision/latest',
@@ -275,9 +267,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_EVERYDAYoy_9050.jpg/revision/latest?cb=20181111022709',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_Alloy_9050.jpg/revision/latest?cb=20181111022709',
   ),
   RnDMaterial(
+    type: 'aluminum',
     name: 'Aluminum EVERYDAYoy 9051',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/db/Aluminum8.png/revision/latest',
@@ -300,12 +293,13 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_EVERYDAYoy_9051.jpg/revision/latest?cb=20181129150501',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_Alloy_9051.jpg/revision/latest?cb=20181129150501',
   ),
 ];
 
 List<RnDMaterial> copper = [
   RnDMaterial(
+    type: 'copper',
     name: 'Clump of Copper Scraps',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bb/Copper1.png/revision/latest',
@@ -340,6 +334,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6f/Clump_of_Copper_Scraps.jpg/revision/latest?cb=20181111000919',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Piece of Broken Copperware',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a1/Copper2.png/revision/latest',
@@ -374,6 +369,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2b/Piece_of_Broken_Copperware.jpg/revision/latest?cb=20181111010106',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Copper Wire Mountain',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b9/Copper3.png/revision/latest',
@@ -408,6 +404,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/da/Copper_Wire_Mountain.jpg/revision/latest?cb=20181111011915',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Pure Copper',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/83/Copper4.png/revision/latest',
@@ -442,6 +439,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6e/Pure_Copper.jpg/revision/latest?cb=20181111013053',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Oxygen-free Copper',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/67/Copper5.png/revision/latest',
@@ -476,6 +474,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/25/Oxygen-free_Copper.jpg/revision/latest?cb=20181111020133',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Beryllium Copper',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/72/Copper6.png/revision/latest',
@@ -501,6 +500,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/76/Beryllium_Copper.jpg/revision/latest?cb=20181111021841',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Corinthian Bronze',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/32/Copper7.png/revision/latest',
@@ -526,6 +526,7 @@ List<RnDMaterial> copper = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/01/Corinthian_Bronze.jpg/revision/latest?cb=20181111022918',
   ),
   RnDMaterial(
+    type: 'copper',
     name: 'Orichalcum',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/1d/Copper8.png/revision/latest',
@@ -555,6 +556,7 @@ List<RnDMaterial> copper = [
 
 List<RnDMaterial> iron = [
   RnDMaterial(
+    type: 'iron',
     name: 'Iron Scraps',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/dc/Iron1.png/revision/latest',
@@ -589,6 +591,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/44/Iron_Scraps.jpg/revision/latest?cb=20181110215517',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Wire Mountain',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7b/Iron2.png/revision/latest',
@@ -623,6 +626,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c2/Wire_Mountain.jpg/revision/latest?cb=20181111004413',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Mass of Iron Bolts',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/aa/Iron3.png/revision/latest',
@@ -657,6 +661,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c6/Mass_of_Iron_Bolts.jpg/revision/latest?cb=20181111011659',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Steel',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/01/Iron4.png/revision/latest',
@@ -691,6 +696,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/46/Steel.jpg/revision/latest?cb=20181111012627',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Ultra-pure Iron',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/5a/Iron5.png/revision/latest',
@@ -725,6 +731,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/9c/Ultra-pure_Iron.jpg/revision/latest?cb=20181111015514',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Special Steel',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Iron6.png/revision/latest',
@@ -750,6 +757,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/62/Special_Steel.jpg/revision/latest?cb=20181111021328',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Chrome-Moly',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fd/Iron7.png/revision/latest',
@@ -775,6 +783,7 @@ List<RnDMaterial> iron = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/9b/Chrome-Moly.jpg/revision/latest?cb=20181111022350',
   ),
   RnDMaterial(
+    type: 'iron',
     name: 'Tamahagane',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/15/Iron8.png/revision/latest',
@@ -803,6 +812,7 @@ List<RnDMaterial> iron = [
 
 List<RnDMaterial> oil = [
   RnDMaterial(
+    type: 'oil',
     name: 'Waste Oil',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f9/Oil1.png/revision/latest',
@@ -837,6 +847,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/52/Waste_Oil.jpg/revision/latest?cb=20181111003357',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Vegetable Oil',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d1/Oil2.png/revision/latest',
@@ -871,6 +882,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c0/Vegetable_Oil.jpg/revision/latest?cb=20181111010521',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Crude Oil',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2a/Oil3.png/revision/latest',
@@ -905,6 +917,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/85/Crude_Oil.jpg/revision/latest?cb=20181111012349',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Mineral Oil',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/18/Oil4.png/revision/latest',
@@ -939,6 +952,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c5/Mineral_Oil.jpg/revision/latest?cb=20181111013814',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Chemo-synthesized Oil',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/ae/Oil5.png/revision/latest',
@@ -973,6 +987,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/10/Chemo-synthesized_Oil.jpg/revision/latest?cb=20181111020635',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Biofuel',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/Oil6.png/revision/latest',
@@ -998,6 +1013,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fd/Biofuel.jpg/revision/latest?cb=20181111022049',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Tiger Grease',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/92/Oil7.png/revision/latest',
@@ -1023,6 +1039,7 @@ List<RnDMaterial> oil = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/47/Tiger_Grease.jpg/revision/latest?cb=20181111023147',
   ),
   RnDMaterial(
+    type: 'oil',
     name: 'Fatback',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b0/Oil8.png/revision/latest',
@@ -1050,6 +1067,7 @@ List<RnDMaterial> oil = [
 
 List<RnDMaterial> wood = [
   RnDMaterial(
+    type: 'wood',
     name: 'Veneer Plank',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4c/Wood1.png/revision/latest',
@@ -1084,6 +1102,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bf/Veneer_Plank.jpg/revision/latest?cb=20181111001202',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'MDF',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/9f/Wood2.png/revision/latest',
@@ -1118,6 +1137,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/35/MDF.jpg/revision/latest?cb=20181111010332',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Rosewood',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/18/Wood3.png/revision/latest',
@@ -1152,6 +1172,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/3c/Rosewood.jpg/revision/latest?cb=20181111012111',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Walnut',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/75/Wood4.png/revision/latest',
@@ -1186,6 +1207,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0a/Walnut.jpg/revision/latest?cb=20181111013423',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Mahogany',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/30/Wood5.png/revision/latest',
@@ -1220,6 +1242,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/93/Mahogany.jpg/revision/latest?cb=20181111020405',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Snake Wood',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/51/Wood6.png/revision/latest',
@@ -1245,6 +1268,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/9f/Snake_Wood.jpg/revision/latest?cb=20181111021956',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Black Coal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bf/Wood7.png/revision/latest',
@@ -1270,6 +1294,7 @@ List<RnDMaterial> wood = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f4/Black_Coal.jpg/revision/latest?cb=20181111023029',
   ),
   RnDMaterial(
+    type: 'wood',
     name: 'Lignum Vitae',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0b/Wood8.png/revision/latest',
@@ -1297,6 +1322,7 @@ List<RnDMaterial> wood = [
 
 List<RnDMaterial> fiber = [
   RnDMaterial(
+    type: 'fiber',
     name: 'Cotton',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4a/Fiber1.png/revision/latest',
@@ -1331,6 +1357,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/71/Cotton.jpg/revision/latest?cb=20181111004105',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Hemp',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a4/Fiber2.png/revision/latest',
@@ -1365,6 +1392,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/67/Hemp.jpg/revision/latest?cb=20181111011410',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Leather',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/ac/Fiber3.png/revision/latest',
@@ -1399,6 +1427,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b2/Leather.jpg/revision/latest?cb=20181111012448',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Wool',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ed/Fiber4.png/revision/latest',
@@ -1433,6 +1462,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fe/Wool.jpg/revision/latest?cb=20181111013953',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Silk',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/5b/Fiber5.png/revision/latest',
@@ -1467,6 +1497,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2d/Silk.jpg/revision/latest?cb=20181111020959',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Carbon Fiber',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/cb/Fiber6.png/revision/latest',
@@ -1496,6 +1527,7 @@ List<RnDMaterial> fiber = [
     urlFullImage: '',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Aramid Fiber',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/17/Fiber7.png/revision/latest',
@@ -1521,6 +1553,7 @@ List<RnDMaterial> fiber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ea/Aramid_Fiber.jpg/revision/latest?cb=20181111023304',
   ),
   RnDMaterial(
+    type: 'fiber',
     name: 'Polyarylate Fiber',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Fiber8.png/revision/latest',
@@ -1548,6 +1581,7 @@ List<RnDMaterial> fiber = [
 
 List<RnDMaterial> tuber = [
   RnDMaterial(
+    type: 'tuber',
     name: 'Scratch Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/73/Tuber1.png/revision/latest',
@@ -1573,6 +1607,7 @@ List<RnDMaterial> tuber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7a/Scratch_Metal.jpg/revision/latest?cb=20181111023549',
   ),
   RnDMaterial(
+    type: 'tuber',
     name: 'Bullet Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/Tuber2.png/revision/latest',
@@ -1600,6 +1635,7 @@ List<RnDMaterial> tuber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/ce/Bullet_Metal.jpg/revision/latest?cb=20181111023833',
   ),
   RnDMaterial(
+    type: 'tuber',
     name: 'Hovering Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ea/Tuber3.png/revision/latest',
@@ -1623,6 +1659,7 @@ List<RnDMaterial> tuber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f3/Hovering_Metal.jpg/revision/latest?cb=20181111024015',
   ),
   RnDMaterial(
+    type: 'tuber',
     name: 'Bone Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2b/Tuber4.png/revision/latest',
@@ -1650,6 +1687,7 @@ List<RnDMaterial> tuber = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f7/Bone_Metal.jpg/revision/latest?cb=20181111024149',
   ),
   RnDMaterial(
+    type: 'tuber',
     name: 'Reversal Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bd/Tuber5.png/revision/latest',
@@ -1680,6 +1718,7 @@ List<RnDMaterial> tuber = [
 
 List<RnDMaterial> dod = [
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Blue Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/af/DOD_Blue.png/revision/latest',
@@ -1751,6 +1790,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a0/D.O.D._ARMS_Blue_Metal.jpg/revision/latest?cb=20181111024857',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Green Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/29/DOD_Green.png/revision/latest',
@@ -1815,6 +1855,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/82/D.O.D._ARMS_Green_Metal.jpg/revision/latest?cb=20181111025047',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Black Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a6/DOD_Black.png/revision/latest',
@@ -1929,6 +1970,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/03/D.O.D._ARMS_Black_Metal.jpg/revision/latest?cb=20181111025222',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Red Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d0/DOD_Red.png/revision/latest',
@@ -2025,6 +2067,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/90/D.O.D._ARMS_Red_Metal.jpg/revision/latest?cb=20181111025602',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Purple Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e9/DOD_Purple.png/revision/latest',
@@ -2104,6 +2147,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/57/D.O.D._ARMS_Purple_Metal.jpg/revision/latest?cb=20181111025736',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Orange Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b9/DOD_Orange.png/revision/latest',
@@ -2133,6 +2177,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/06/D.O.D._ARMS_Orange_Metal.jpg/revision/latest?cb=20181111025915',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS Platinum Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6c/DOD_Platinum.png/revision/latest',
@@ -2158,6 +2203,7 @@ List<RnDMaterial> dod = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d1/D.O.D._ARMS_Platinum_Metal.jpg/revision/latest?cb=20181129151027',
   ),
   RnDMaterial(
+    type: 'dod',
     name: 'D.O.D. ARMS 44CE Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/87/DOD_44CE.png/revision/latest',
@@ -2187,6 +2233,7 @@ List<RnDMaterial> dod = [
 
 List<RnDMaterial> we = [
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Blue Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/66/WE_Blue.png/revision/latest',
@@ -2250,6 +2297,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/0d/War_Ensemble_Blue_Metal.jpg/revision/latest?cb=20181111030930',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Green Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/WE_Green.png/revision/latest',
@@ -2316,6 +2364,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/03/War_Ensemble_Green_Metal.jpg/revision/latest?cb=20181111031049',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Black Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fa/WE_Black.png/revision/latest',
@@ -2399,6 +2448,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8a/War_Ensemble_Black_Metal.jpg/revision/latest?cb=20181111031140',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Red Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/WE_Red.png/revision/latest',
@@ -2504,6 +2554,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7a/War_Ensemble_Red_Metal.jpg/revision/latest?cb=20181111031218',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Purple Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/94/WE_Purple.png/revision/latest',
@@ -2573,6 +2624,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4c/War_Ensemble_Purple_Metal.jpg/revision/latest?cb=20181111031239',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Orange Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/18/WE_Orange.png/revision/latest',
@@ -2603,6 +2655,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/2b/War_Ensemble_Orange_Metal.jpg/revision/latest?cb=20181111031304',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble Platinum Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d5/WE_Platinum.png/revision/latest',
@@ -2628,6 +2681,7 @@ List<RnDMaterial> we = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/4d/War_Ensemble_Platinum_Metal.jpg/revision/latest?cb=20181129151050',
   ),
   RnDMaterial(
+    type: 'we',
     name: 'War Ensemble 44CE Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8d/WE_44CE.png/revision/latest',
@@ -2657,6 +2711,7 @@ List<RnDMaterial> we = [
 
 List<RnDMaterial> cw = [
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Blue Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/14/CW_Blue.png/revision/latest',
@@ -2717,6 +2772,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/98/Candle_Wolf_Blue_Metal.jpg/revision/latest?cb=20181111031340',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Green Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/40/CW_Green.png/revision/latest',
@@ -2779,6 +2835,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b4/Candle_Wolf_Green_Metal.jpg/revision/latest?cb=20181111031358',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Black Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d9/CW_Black.png/revision/latest',
@@ -2877,6 +2934,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d9/Candle_Wolf_Black_Metal.jpg/revision/latest?cb=20181111031418',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Red Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/ae/CW_Red.png/revision/latest',
@@ -2965,6 +3023,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/59/Candle_Wolf_Red_Metal.jpg/revision/latest?cb=20181111031440',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Purple Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/60/CW_Purple.png/revision/latest',
@@ -3034,6 +3093,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/34/Candle_Wolf_Purple_Metal.jpg/revision/latest?cb=20181111031508',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Orange Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/1d/CW_Orange.png/revision/latest',
@@ -3063,6 +3123,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8e/Candle_Wolf_Orange_Metal.jpg/revision/latest?cb=20181111031526',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf Platinum Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/CW_Platinum.png/revision/latest',
@@ -3087,6 +3148,7 @@ List<RnDMaterial> cw = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6c/Candle_Wolf_Platinum_Metal.jpg/revision/latest?cb=20181129151110',
   ),
   RnDMaterial(
+    type: 'cw',
     name: 'Candle Wolf 44CE Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/bb/CW_44CE.png/revision/latest',
@@ -3116,6 +3178,7 @@ List<RnDMaterial> cw = [
 
 List<RnDMaterial> milk = [
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Blue Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b9/MILK_Blue.png/revision/latest',
@@ -3176,6 +3239,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/ca/M.I.L.K._Blue_Metal.jpg/revision/latest?cb=20181111031546',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Green Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/1c/MILK_Green.png/revision/latest',
@@ -3232,6 +3296,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/af/M.I.L.K._Green_Metal.jpg/revision/latest?cb=20181111031613',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Black Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7d/MILK_Black.png/revision/latest',
@@ -3324,6 +3389,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b0/M.I.L.K._Black_Metal.jpg/revision/latest?cb=20181111031636',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Red Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/9/91/MILK_Red.png/revision/latest',
@@ -3414,6 +3480,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/00/M.I.L.K._Red_Metal.jpg/revision/latest?cb=20181111031722',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Purple Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b7/MILK_Purple.png/revision/latest',
@@ -3483,6 +3550,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d1/M.I.L.K._Purple_Metal.jpg/revision/latest?cb=20181111031804',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Orange Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/46/MILK_Orange.png/revision/latest',
@@ -3512,6 +3580,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/cf/M.I.L.K._Orange_Metal.jpg/revision/latest?cb=20181111031822',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. Platinum Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/89/MILK_Platinum.png/revision/latest',
@@ -3537,6 +3606,7 @@ List<RnDMaterial> milk = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/36/M.I.L.K._Platinum_Metal.jpg/revision/latest?cb=20181129151133',
   ),
   RnDMaterial(
+    type: 'milk',
     name: 'M.I.L.K. 44CE Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7e/MILK_44CE.png/revision/latest',
@@ -3566,6 +3636,7 @@ List<RnDMaterial> milk = [
 
 List<RnDMaterial> jackal = [
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal X ID Card',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e0/IDX.png/revision/latest',
@@ -3590,6 +3661,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/x_id_card.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal Y ID Card',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/IDY.png/revision/latest',
@@ -3614,6 +3686,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/y_id_card.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal Z ID Card',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8e/IDZ.png/revision/latest',
@@ -3638,6 +3711,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/z_id_card.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Sunflower Rare Metal',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a7/SunflowerM.png/revision/latest',
@@ -3662,6 +3736,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Sunflower Rare Metal X',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/ca/SunflowerX.png/revision/latest',
@@ -3686,6 +3761,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_X.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Sunflower Rare Metal Y',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/20/SunflowerY.png/revision/latest',
@@ -3710,6 +3786,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_y.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Sunflower Rare Metal Z',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/70/SunflowerZ.png/revision/latest',
@@ -3734,6 +3811,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_Z.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Sunflower Rare Metal D',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/3/37/SunflowerD.png/revision/latest',
@@ -3758,6 +3836,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/sunflower_D.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal X DNA Data',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/fa/DNAX.png/revision/latest',
@@ -3782,6 +3861,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/x_dna.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal Y DNA Data',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c2/DNAY.png/revision/latest',
@@ -3806,6 +3886,7 @@ List<RnDMaterial> jackal = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/y_dna.png',
   ),
   RnDMaterial(
+    type: 'jackal',
     name: 'Jackal Z DNA Data',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/6f/DNAZ.png/revision/latest',
@@ -3833,6 +3914,7 @@ List<RnDMaterial> jackal = [
 
 List<RnDMaterial> roids = [
   RnDMaterial(
+    type: 'roids',
     name: 'Blue Death \'Roids',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/80/DRBlue.png/revision/latest?cb=20190129214823',
@@ -3855,6 +3937,7 @@ List<RnDMaterial> roids = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/blue_roid.png',
   ),
   RnDMaterial(
+    type: 'roids',
     name: 'Green Death \'Roids',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/1/19/DRGreen.png/revision/latest?cb=20190129214843',
@@ -3877,6 +3960,7 @@ List<RnDMaterial> roids = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/green_roid.png',
   ),
   RnDMaterial(
+    type: 'roids',
     name: 'Black Death \'Roids',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/66/DRBlack.png/revision/latest?cb=20190129214904',
@@ -3899,6 +3983,7 @@ List<RnDMaterial> roids = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/black_roid.png',
   ),
   RnDMaterial(
+    type: 'roids',
     name: 'Red Death \'Roids',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/2/23/DRRed.png/revision/latest?cb=20190129214947',
@@ -3921,6 +4006,7 @@ List<RnDMaterial> roids = [
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/red_roid.png',
   ),
   RnDMaterial(
+    type: 'roids',
     name: 'Purple Death \'Roids',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d8/DRPurple.png/revision/latest?cb=20190129215014',

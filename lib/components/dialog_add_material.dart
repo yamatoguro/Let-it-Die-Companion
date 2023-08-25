@@ -33,11 +33,9 @@ class _RnDFormState extends State<RnDForm> {
               value: matType,
               icon: const Icon(Icons.arrow_drop_down),
               elevation: 24,
-              style: const TextStyle(color: Colors.white, fontSize: 24),
+              style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
-                  debugPrint(newValue);
-
                   if (newValue != null) {
                     String type = processMatType(newValue);
                     matType = newValue;
@@ -48,7 +46,6 @@ class _RnDFormState extends State<RnDForm> {
                     for (var item in list) {
                       materials.add(item.name);
                     }
-                    debugPrint(materials.toString());
                   }
                 });
               },
@@ -71,7 +68,6 @@ class _RnDFormState extends State<RnDForm> {
                   value: value,
                   child: Text(
                     value,
-                    style: const TextStyle(color: Colors.white),
                   ),
                 );
               }).toList(),
@@ -85,7 +81,7 @@ class _RnDFormState extends State<RnDForm> {
               value: mat,
               icon: const Icon(Icons.arrow_drop_down),
               elevation: 24,
-              style: const TextStyle(color: Colors.white, fontSize: 24),
+              style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
                   mat = newValue!;
@@ -94,10 +90,7 @@ class _RnDFormState extends State<RnDForm> {
               items: materials.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(
-                    value,
-                    style: const TextStyle(color: Colors.white),
-                  ),
+                  child: Text(value),
                 );
               }).toList(),
             ),
@@ -125,7 +118,7 @@ class _RnDFormState extends State<RnDForm> {
                       context,
                       ReturnValue(
                         matType: processMatType(matType),
-                        mat: processMat(mat),
+                        rarity: processMat(mat),
                         qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
@@ -190,8 +183,8 @@ class _RnDFormState extends State<RnDForm> {
 
 class ReturnValue {
   final String matType;
-  final int mat;
+  final int rarity;
   final int qtd;
 
-  ReturnValue({required this.matType, required this.mat, required this.qtd});
+  ReturnValue({required this.matType, required this.rarity, required this.qtd});
 }

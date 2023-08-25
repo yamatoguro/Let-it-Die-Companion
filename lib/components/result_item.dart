@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lid_companion/materials_data.dart';
+
+import '../models/rnd_material.dart';
 
 class ResultItem extends StatelessWidget {
   final RnDMaterial material;
