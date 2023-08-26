@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/models/cake_item.dart';
 import 'package:lid_companion/models/rnd_material.dart';
 import 'package:path/path.dart';
@@ -9,37 +10,22 @@ import 'package:sqflite/sqflite.dart';
 class DatabaseService {
   static final database = start();
   static Future<Database> start() async {
-    // Avoid errors caused by flutter upgrade.
-    // Importing 'package:flutter/widgets.dart' is required.
     WidgetsFlutterBinding.ensureInitialized();
-    // Open the database and store the reference.
     return openDatabase(
-      // Set the path to the database. Note: Using the `join` function from the
-      // `path` package is best practice to ensure the path is correctly
-      // constructed for each platform.
       join(await getDatabasesPath(), 'cake.db'),
-      // When the database is first created, create a table to store dogs.
       onCreate: (db, version) {
-        // Run the CREATE TABLE statement on the database.
         return db.execute(
           'CREATE TABLE cakeitem(id INTEGER PRIMARY KEY NOT NULL, type TEXT, rarity INTEGER, quantity INTEGER, current INTEGER)',
         );
       },
-      // Set the version. This executes the onCreate function and provides a
-      // path to perform database upgrades and downgrades.
       version: 1,
     );
   }
 
   static Future<void> insertCakeItem(CakeItem cakeItem) async {
-    // Define a function that inserts dogs into the database
-    // Get a reference to the database.
     final db = await database;
 
-    // Insert the Dog into the correct table. You might also specify the
-    // `conflictAlgorithm` to use in case the same dog is inserted twice.
     //
-    // In this case, replace any previous data.
     await db.insert(
       'cakeitem',
       cakeItem.toMap(),
@@ -48,13 +34,10 @@ class DatabaseService {
   }
 
   static Future<List<CakeItem>> cakeItems() async {
-    // Get a reference to the database.
     final Database db = await database;
 
-    // Query the table for all The Dogs.
     final List<Map<String, dynamic>> maps = await db.query('cakeitem');
 
-    // Convert the List<Map<String, dynamic> into a List<Dog>.
     return List.generate(maps.length, (i) {
       return CakeItem(
         id: maps[i]['id'],
@@ -67,45 +50,30 @@ class DatabaseService {
   }
 
   static Future<void> updateCakeItem(CakeItem cakeItem) async {
-    // Get a reference to the database.
     final Database db = await database;
-    int id = cakeItem.id;
-    // Update the given Dog.
+    int id = getID(mats[cakeItem.type]![cakeItem.rarity - 1]);
     await db.update(
       'cakeitem',
-      {
-        'id': cakeItem.id,
-        'type': cakeItem.type,
-        'rarity': cakeItem.rarity,
-        'quantity': cakeItem.quantity,
-        'current': cakeItem.current,
-      },
-      // Use a `where` clause to delete a specific dog.
+      cakeItem.toMap(),
       where: 'id = ?',
-      // Pass the Dog's id as a whereArg to prevent SQL injection.
       whereArgs: [id],
     );
   }
 
   static Future<void> deleteCakeItem(CakeItem cakeItem) async {
-    // Get a reference to the database.
     final Database db = await database;
-    int id = cakeItem.id;
-    // String type = cakeItem.type;
-    // int rarity = cakeItem.rarity;
-    // Remove the Dog from the database.
-    // await db.rawQuery(
-    //   'DELETE FROM cakeitem WHERE type LIKE "$type%" AND rarity="$rarity"',
-    // );
+    int id = getID(mats[cakeItem.type]![cakeItem.rarity - 1]);
     db.delete(
       'cakeitem',
-      // Use a `where` clause to delete a specific dog.
       where: 'id = ?',
-      // Pass the Dog's id as a whereArg to prevent SQL injection.
       whereArgs: [id],
     );
-    // db.rawDelete(
-    //     'DELETE FROM cakeitem WHERE type LIKE "$type%" AND rarity="$rarity"');
+  }
+
+  static Future<void> updateCakeList(List<CakeItem> list) async {
+    for (CakeItem item in list) {
+      updateCakeItem(item);
+    }
   }
 
   static int getID(RnDMaterial m) {

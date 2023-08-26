@@ -55,17 +55,14 @@ class _FarmControlState extends State<FarmControl> {
           delete: removeItem,
           edit: editItem,
         );
-        if (materials.any(
-            (item) => (item as ItemMaterial).material == newItem.material)) {
+        if (materials.any((item) => (item).material == newItem.material)) {
           var item = materials
-              .where((e) =>
-                  (e as ItemMaterial).material.name == newItem.material.name)
+              .where((e) => (e).material.name == newItem.material.name)
               .first;
           newItem = ItemMaterial(
             id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
             material: mats[v.matType]![v.rarity],
-            quantity: (int.parse((item as ItemMaterial).quantity) +
-                    int.parse(newItem.quantity))
+            quantity: (int.parse((item).quantity) + int.parse(newItem.quantity))
                 .toString(),
             current: item.current,
             delete: removeItem,
@@ -93,9 +90,7 @@ class _FarmControlState extends State<FarmControl> {
   }
 
   removeItem(material) async {
-    ItemMaterial item = materials
-        .where((e) => (e as ItemMaterial).material == material)
-        .first as ItemMaterial;
+    ItemMaterial item = materials.where((e) => (e).material == material).first;
     await DatabaseService.deleteCakeItem(CakeItem(
             id: item.id,
             type: item.material.type,
@@ -103,14 +98,11 @@ class _FarmControlState extends State<FarmControl> {
             quantity: int.parse(item.quantity),
             current: 0))
         .then((value) => materials.remove(item));
-    List<CakeItem> items = await DatabaseService.cakeItems();
     setState(() {});
   }
 
   editItem(material, bool add) async {
-    ItemMaterial item = materials
-        .where((e) => (e as ItemMaterial).material == material)
-        .first as ItemMaterial;
+    ItemMaterial item = materials.where((e) => (e).material == material).first;
     await DatabaseService.updateCakeItem(CakeItem(
             id: item.id,
             type: item.material.type,
@@ -120,7 +112,20 @@ class _FarmControlState extends State<FarmControl> {
         .then((value) => setState(() {}));
   }
 
-  List<Widget> materials = [
+  endRun() {
+    List<CakeItem> cakelist = [];
+    for (ItemMaterial item in materials) {
+      cakelist.add(CakeItem(
+          id: item.id,
+          type: item.material.type,
+          rarity: item.material.rarity,
+          quantity: int.parse(item.quantity),
+          current: item.current as int));
+    }
+    DatabaseService.updateCakeList(cakelist);
+  }
+
+  List<ItemMaterial> materials = [
     // ItemMaterial(material: mats['tuber']![3], quantity: '2'),
     // ItemMaterial(material: mats['dod']![7], quantity: '2'),
     // ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
@@ -200,7 +205,7 @@ class _FarmControlState extends State<FarmControl> {
                       onPressed: () {
                         List<ItemMaterial> result = [];
                         for (var element in materials) {
-                          result.add(element as ItemMaterial);
+                          result.add(element);
                         }
                         Future future = showDialog(
                           context: context,
@@ -211,9 +216,8 @@ class _FarmControlState extends State<FarmControl> {
                         future.then((value) {
                           setState(() {
                             List<Widget> matsList = materials
-                                .where((e) =>
-                                    int.parse((e as ItemMaterial).quantity) >
-                                    e.current)
+                                .where(
+                                    (e) => int.parse((e).quantity) > e.current)
                                 .toList();
                             materials = [];
                             for (var e in matsList) {
@@ -222,14 +226,14 @@ class _FarmControlState extends State<FarmControl> {
                                       e.current;
                               RnDMaterial m = e.material;
                               e = ItemMaterial(
-                                id: DatabaseService.getID(
-                                    mats[m.type]![m.rarity]),
+                                id: m.rarity,
                                 material: m,
                                 quantity: quantity.toString(),
-                                current: e.current,
+                                current: 0,
                               );
                               materials.add(e);
                             }
+                            endRun();
                           });
                         });
                       },
