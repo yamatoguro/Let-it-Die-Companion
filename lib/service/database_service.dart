@@ -57,6 +57,7 @@ class DatabaseService {
       cakeItem.toMap(),
       where: 'id = ?',
       whereArgs: [id],
+      conflictAlgorithm: ConflictAlgorithm.replace,
     );
   }
 

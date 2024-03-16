@@ -20,6 +20,7 @@ class _FarmControlState extends State<FarmControl> {
   bool checked = false;
 
   _loadItems() async {
+    materials = [];
     List<CakeItem> items = await DatabaseService.cakeItems();
     if (items.isNotEmpty) {
       for (CakeItem e in items) {
@@ -86,6 +87,7 @@ class _FarmControlState extends State<FarmControl> {
               current: 0));
         }
       }
+      _loadItems();
     });
   }
 
