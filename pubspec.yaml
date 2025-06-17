@@ -14,9 +14,9 @@ dependencies:
 
   cupertino_icons:
   flutter_launcher_name:
-  flutter_slidable: ^2.0.0
-  flutter_launcher_icons: ^0.8.1
-  url_launcher: ^6.1.10
+  flutter_slidable:
+  flutter_launcher_icons:
+  # url_launcher:
 
 dev_dependencies:
   flutter_test:
@@ -34,7 +34,7 @@ flutter:
     - assets/json/
 
 flutter_icons:
-  image_path: "assets/images/app-logo7.png" 
+  image_path: "assets/images/app-logo7.png"
   android: true
   ios: true
   # optionally, as transparency is not allowed on app store

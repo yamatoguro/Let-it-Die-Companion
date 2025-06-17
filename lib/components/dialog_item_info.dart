@@ -13,6 +13,8 @@ class DialogItemInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       scrollable: true,
+      backgroundColor: Colors.blueGrey[700]!.withOpacity(0.9),
+      elevation: 10,
       title: Image.network(
         material.urlFullImage,
         alignment: Alignment.center,

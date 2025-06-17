@@ -66,7 +66,8 @@ class _ItemMaterialState extends State<ItemMaterial> {
             alignment: Alignment.center,
             scale: .4,
           ),
-          title: Text(widget.material.name),
+          title:
+              Text(widget.material.name, style: const TextStyle(fontSize: 13)),
           subtitle: Row(
             children: [..._getStars(widget.material.rarity)],
           ),
@@ -101,7 +102,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
       stars.add(const Icon(
         Icons.star,
         color: Colors.yellowAccent,
-        size: 15,
+        size: 10,
       ));
     }
     return stars;

@@ -32,6 +32,7 @@ Map<String, List<RnDMaterial>> mats = {
   'milk': milk,
   'jackal': jackal,
   'roids': roids,
+  'skillshroom': skillshroom,
 };
 
 // -- Linha de texto para link --
@@ -194,7 +195,7 @@ List<RnDMaterial> aluminum = [
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/ee/Pure_Aluminum.jpg/revision/latest?cb=20181111012813',
   ),
   RnDMaterial(
-    name: 'Aluminum EVERYDAYoy 7075',
+    name: 'Aluminum Alloy 7075',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/f1/Aluminum5.png/revision/latest',
     rarity: 5,
@@ -205,7 +206,7 @@ List<RnDMaterial> aluminum = [
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-              'As a 5-Star Material, Aluminum EVERYDAYoy 7075 mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Aluminum-specific floors in Gunkanyama\'s Area (31-40F).'),
+              'As a 5-Star Material, Aluminum Alloy 7075 mainly appears above 41F+, in Battle To The Top and Tengoku. Rarely appears on Aluminum-specific floors in Gunkanyama\'s Area (31-40F).'),
           Text(
               'Can be bought for 10000 KC from Gyaku-Funsha, or from the daily Hernia lineup (if available) for 5000 KC / 1 Death Metal (for x1) or 20000 KC / 4 Death Metals (for x5). Drops from Gold Lost Bags.\n'),
           Text('Aluminum-specific Floors',
@@ -225,10 +226,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_EVERYDAYoy_7075.jpg/revision/latest?cb=20181111020020',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/a/a3/Aluminum_Alloy_7075.jpg/revision/latest?cb=20181111020020',
   ),
   RnDMaterial(
-    name: 'Aluminum EVERYDAYoy 9048',
+    name: 'Aluminum Alloy 9048',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/7/7b/Aluminum6.png/revision/latest',
     rarity: 6,
@@ -239,7 +240,7 @@ List<RnDMaterial> aluminum = [
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-              'As a 6-Star Material, Aluminum EVERYDAYoy 9048 mainly appears above 41F+, on Aluminum-specific floors in Battle To The Top and Tengoku.'),
+              'As a 6-Star Material, Aluminum Alloy 9048 mainly appears above 41F+, on Aluminum-specific floors in Battle To The Top and Tengoku.'),
           Text(
               'Can be bought for 1500 Bloodnium in the Bloodnium Exchange, or from the daily Hernia lineup (if available) for 15000 KC / 3 Death Metal (for x1) or 60000 KC / 12 Death Metals (for x5). Drops from Platinum Lost Bags.\n'),
           Text('Aluminum-specific Floors',
@@ -250,10 +251,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_EVERYDAYoy_9048.jpg/revision/latest?cb=20181111021649',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/53/Aluminum_Alloy_9048.jpg/revision/latest?cb=20181111021649',
   ),
   RnDMaterial(
-    name: 'Aluminum EVERYDAYoy 9050',
+    name: 'Aluminum Alloy 9050',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/b/b8/Aluminum7.png/revision/latest',
     rarity: 7,
@@ -264,7 +265,7 @@ List<RnDMaterial> aluminum = [
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-              'Aluminum EVERYDAYoy 9050 only appears on Aluminum-specific floors in Tengoku. It becomes more common above 100F.'),
+              'Aluminum Alloy 9050 only appears on Aluminum-specific floors in Tengoku. It becomes more common above 100F.'),
           Text(
               'Can be bought for BL.png 2000 Bloodnium in the Bloodnium Exchange, or from the daily Hernia lineup (if available) for 20000 KC / 4 Death Metal (for x1) or 80000 KC / 16 Death Metals (for x5). Drops from Platinum Lost Bags.\n'),
           Text('Aluminum-specific Floors',
@@ -275,10 +276,10 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_EVERYDAYoy_9050.jpg/revision/latest?cb=20181111022709',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/08/Aluminum_Alloy_9050.jpg/revision/latest?cb=20181111022709',
   ),
   RnDMaterial(
-    name: 'Aluminum EVERYDAYoy 9051',
+    name: 'Aluminum Alloy 9051',
     url:
         'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/db/Aluminum8.png/revision/latest',
     rarity: 8,
@@ -289,7 +290,7 @@ List<RnDMaterial> aluminum = [
         crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
-              'Aluminum EVERYDAYoy 9051 can rarely appear in Tengoku on Aluminum-specific floors above 80F.'),
+              'Aluminum Alloy 9051 can rarely appear in Tengoku on Aluminum-specific floors above 80F.'),
           Text(
               'May also be bought once-per-day in the Bloodnium Exchange for 2500 Bloodnium.\n'),
           Text('Aluminum-specific Floors',
@@ -300,7 +301,7 @@ List<RnDMaterial> aluminum = [
       ),
     ),
     urlFullImage:
-        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_EVERYDAYoy_9051.jpg/revision/latest?cb=20181129150501',
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/6/64/Aluminum_Alloy_9051.jpg/revision/latest?cb=20181129150501',
   ),
 ];
 
@@ -2183,6 +2184,33 @@ List<RnDMaterial> dod = [
     urlFullImage:
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/dod_44ce.png',
   ),
+  RnDMaterial(
+    name: 'D.O.D. ARMS 44CE Metal H',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/5/56/DOD_44CE_H.png/revision/latest',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'D.O.D. ARMS 44CE Metals H are 8-Star Faction Metals for developing and upgrading weapons and armor at Choku-Funsha.'),
+          Text(''),
+          Text(
+              'D.O.D. ARMS 44CE Metal H can only drop from the D.O.D. ARMS Forcemen, Hell Steel, after defeating him on Hell difficulty for NEO D.O.D. Forcemen may be fought for free on the difficulty.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('60F, 70F, 80F, 90F, 100F	NEO D.O.D'),
+          Text('All	BOSS: Hell Steel - Hell.'),
+          Text('Entry Fee:  Free'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d4/D.O.D._ARMS_44CE_Metal_H_Itembox.png/revision/latest',
+  ),
 ];
 
 List<RnDMaterial> we = [
@@ -2653,6 +2681,33 @@ List<RnDMaterial> we = [
     urlFullImage:
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/war_ensemble_44ce.png',
   ),
+  RnDMaterial(
+    name: 'War Ensemble 44CE Metal H',
+    url:
+        'https://letitdie.wiki.gg/images/thumb/8/82/WE_44CE_H.png/16px-WE_44CE_H.png?7a53e7',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'War Ensemble 44CE Metals H are 8-Star Faction Metals for developing and upgrading weapons and armor at Choku-Funsha.'),
+          Text(''),
+          Text(
+              'War Ensemble 44CE Metal H can only drop from the War Ensemble Forcemen, Hell Steel, after defeating him on Hell difficulty for NEO War Ensemble may be fought for free on the difficulty.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('60F, 70F, 80F, 90F, 100F	NEO War Ensemble'),
+          Text('All	BOSS: Red Napalm - Hell.'),
+          Text('Entry Fee:  Free'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://letitdie.wiki.gg/images/d/db/War_Ensemble_44CE_Metal_H_Itembox.png?9082b1&20240809222146',
+  ),
 ];
 
 List<RnDMaterial> cw = [
@@ -3112,6 +3167,33 @@ List<RnDMaterial> cw = [
     urlFullImage:
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/candle-wolf_44ce.png',
   ),
+  RnDMaterial(
+    name: 'Candle Wolf 44CE Metal H',
+    url:
+        'https://letitdie.wiki.gg/images/thumb/0/05/CW_44CE_H.png/16px-CW_44CE_H.png?b6ba6e',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Candle Wolf 44CE Metals H are 8-Star Faction Metals for developing and upgrading weapons and armor at Choku-Funsha.'),
+          Text(''),
+          Text(
+              'Candle Wolf 44CE Metal H can only drop from the Candle Wolf Forcemen, Hell Steel, after defeating him on Hell difficulty for NEO Candle Wolf may be fought for free on the difficulty.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('60F, 70F, 80F, 90F, 100F	NEO Candle Wolf'),
+          Text('All	BOSS: Black Thunder - Hell.'),
+          Text('Entry Fee:  Free'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://letitdie.wiki.gg/images/3/34/Candle_Wolf_44CE_Metal_H_Itembox.png?56763d',
+  ),
 ];
 
 List<RnDMaterial> milk = [
@@ -3562,6 +3644,33 @@ List<RnDMaterial> milk = [
     urlFullImage:
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/milk_44ce.png',
   ),
+  RnDMaterial(
+    name: 'M.I.L.K. 44CE Metal H',
+    url:
+        'https://letitdie.wiki.gg/images/thumb/8/81/MILK_44CE_H.png/16px-MILK_44CE_H.png?c82ea0',
+    rarity: 8,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'M.I.L.K. 44CE Metals H are 8-Star Faction Metals for developing and upgrading weapons and armor at Choku-Funsha.'),
+          Text(''),
+          Text(
+              'M.I.L.K. 44CE Metal H can only drop from the M.I.L.K. Forcemen, Hell Steel, after defeating him on Hell difficulty for NEO M.I.L.K. may be fought for free on the difficulty.'),
+          Text(''),
+          Text('Available Floors'),
+          Text('60F, 70F, 80F, 90F, 100F	NEO M.I.L.K.'),
+          Text('All	BOSS: Pale Wind - Hell.'),
+          Text('Entry Fee:  Free'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/milk_44ce.png',
+  ),
 ];
 
 List<RnDMaterial> jackal = [
@@ -3941,5 +4050,220 @@ List<RnDMaterial> roids = [
     ),
     urlFullImage:
         'https://raw.githubusercontent.com/yamatoguro/lid_companion_images/main/purple_roid.png',
+  ),
+];
+
+List<RnDMaterial> skillshroom = [
+  RnDMaterial(
+    name: 'Bronze Skillshroom',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/c/c0/SkillB.png',
+    rarity: 0,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Bronze Skillshrooms are the common variety of Skillshrooms that can be found within the Tower of Barbs. They cannot be cooked. Along with the Silver and Golden Skillshrooms, they can be traded with Momoko Yamada for Skill Decals. More than simply mushrooms, however, they are also a required material in many different R&D recipes at Choku-Funsha.'),
+          Text(''),
+          Text('Quests'),
+          Text(''),
+          Text('No. 170'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #010'),
+          Text('Detail Collect Yogashroom x10 in the tower'),
+          Text('Reward Bronze Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 171'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #011'),
+          Text('Detail Collect Decoyshroom x10 in the tower'),
+          Text('Reward Bronze Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 172'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #012'),
+          Text('Detail Collect Mouseshroom x10 in the tower'),
+          Text('Reward Bronze Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 173'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #013'),
+          Text('Detail Collect Stingshroom x10 in the tower'),
+          Text('Reward Bronze Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text('Uses'),
+          Text(
+              'For all non-Event gear, it currently takes 191 Bronze Skillshrooms to complete its uses. Event gear uses an additional 101, for a complete total of 292. More may be needed for Skill Decal trading.'),
+          Text(
+              'NOTE: Tier is a level of power typically based on the number of times equipment has changed forms, not the number of stars it has.'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/4/48/Bronze_Skillshroom1.png/revision/latest',
+  ),
+  RnDMaterial(
+    name: 'Silver Skillshroom',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/0/02/SkillS.png',
+    rarity: 0,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Silver Skillshrooms are the uncommon variety of Skillshrooms that can be found within the Tower of Barbs. They cannot be cooked. Along with the Bronze and Golden Skillshrooms, they can be traded with Momoko Yamada for Skill Decals. More than simply mushrooms, however, they are also a required material in many different R&D recipes at Choku-Funsha.'),
+          Text(''),
+          Text('Quests'),
+          Text(''),
+          Text('No. 174'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #014'),
+          Text(
+              'Detail Collect Snailshroom x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 175'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #015'),
+          Text(
+              'Detail Collect Fishy Fungus x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 176'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #016'),
+          Text(
+              'Detail Collect Slowmungus x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 177'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #017'),
+          Text(
+              'Detail Collect Punchshroom x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 178'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #018'),
+          Text(
+              'Detail Collect Vampire Fungus x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 179'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #018'),
+          Text(
+              'Detail Collect Staminungus x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+          Text(''),
+          Text('No. 180'),
+          Text('Difficulty ★★'),
+          Text('Name Mushroom Finding #018'),
+          Text(
+              'Detail Collect Gambleshroom x10 in the tower - Silver Skillshroom'),
+          Text('Reward Silver Skillshroom'),
+          Text('Repeat Reward 1000 KC'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/e/e4/Silver_Skillshroom1.png/revision/latest',
+  ),
+  RnDMaterial(
+    name: 'Gold Skillshroom',
+    url:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/f/ff/SkillG.png',
+    rarity: 0,
+    where: SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+              'Golden Skillshrooms are the rare variety of Skillshrooms that can be found within the Tower of Barbs. They cannot be cooked. Along with the Bronze and Silver Skillshrooms, they can be traded with Momoko Yamada for Skill Decals. More than simply mushrooms, however, they are also a required material in many different R&D recipes at Choku-Funsha.'),
+          Text(''),
+          Text('Quests'),
+          Text('No. 182'),
+          Text('Difficulty ★★★'),
+          Text('Name Mushroom Finding #022'),
+          Text('Category Collect'),
+          Text('Detail Collect Lifeshroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 2000 KC'),
+          Text(''),
+          Text('No. 183'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #023'),
+          Text('Category Collect'),
+          Text('Detail Collect Lavashroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text(''),
+          Text('No. 184'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #024'),
+          Text('Category Collect'),
+          Text('Detail Collect Guardshroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text(''),
+          Text('No. 185'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #025'),
+          Text('Category Collect'),
+          Text('Detail Collect Fun Fungus x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text(''),
+          Text('No. 186'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #026'),
+          Text('Category Collect'),
+          Text('Detail Collect Dragonshroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text(''),
+          Text('No. 187'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #027'),
+          Text('Category Collect'),
+          Text('Detail Collect Evershroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text(''),
+          Text('No. 188'),
+          Text('Difficulty ★★★★'),
+          Text('Name Mushroom Finding #028'),
+          Text('Category Collect'),
+          Text('Detail Collect Oakshroom x10 in the tower.'),
+          Text('Reward Golden Skillshroom'),
+          Text('Repeat Reward 4000 KC'),
+          Text('Uses'),
+          Text(
+              'For all non-Event gear, it currently takes 191 Bronze Skillshrooms to complete its uses. Event gear uses an additional 101, for a complete total of 292. More may be needed for Skill Decal trading.'),
+          Text(
+              'NOTE: Tier is a level of power typically based on the number of times equipment has changed forms, not the number of stars it has.'),
+        ],
+      ),
+    ),
+    urlFullImage:
+        'https://static.wikia.nocookie.net/letitdie_gamepedia/images/8/8f/Golden_Skillshroom1.png/revision/latest',
   ),
 ];
