@@ -57,14 +57,18 @@ class Dashboard extends StatelessWidget {
                   children: <Widget>[
                     Card(
                       color: Colors.grey[800]!.withOpacity(0.8),
-                      // child: Icon(Icons.all_inclusive_outlined),
                       child: ListTile(
-                        title: const Image(
-                          image: AssetImage("assets/images/IconMaterials.png"),
+                        title: Image.network(
+                          'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d3/63_Mega_Splattershroom_1.png/revision/latest/scale-to-width-down/125?cb=20200609170235',
+                          alignment: Alignment.center,
+                          scale: .4,
                         ),
                         subtitle: const Text(
-                          'Lorem ipsum',
+                          'Mushroom List',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -79,6 +83,9 @@ class Dashboard extends StatelessWidget {
                         subtitle: const Text(
                           'Lorem ipsum',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -91,6 +98,9 @@ class Dashboard extends StatelessWidget {
                         subtitle: const Text(
                           'Lorem ipsum',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -112,29 +122,29 @@ class Dashboard extends StatelessWidget {
                     },
                   ),
                 ),
-                Card(
-                  color: Colors.grey[800]!.withOpacity(0.8),
-                  child: ListTile(
-                    leading: Image.asset('assets/images/IconBP.png'),
-                    title: const Text('Cake Recipe'),
-                    subtitle:
-                        const Text('Control your farm using R&D requirement'),
-                    onTap: () {
-                      Future future = showDialog(
-                        context: context,
-                        builder: ((contextDialog) =>
-                            const DialogSelectRecipe()),
-                      );
-                      future.then((value) {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const FarmRecipe(),
-                            ));
-                      });
-                    },
-                  ),
-                ),
+                // Card(
+                //   color: Colors.grey[800]!.withOpacity(0.8),
+                //   child: ListTile(
+                //     leading: Image.asset('assets/images/IconBP.png'),
+                //     title: const Text('Cake Recipe'),
+                //     subtitle:
+                //         const Text('Control your farm using R&D requirement'),
+                //     onTap: () {
+                //       Future future = showDialog(
+                //         context: context,
+                //         builder: ((contextDialog) =>
+                //             const DialogSelectRecipe()),
+                //       );
+                //       future.then((value) {
+                //         Navigator.push(
+                //             context,
+                //             MaterialPageRoute(
+                //               builder: (context) => const FarmRecipe(),
+                //             ));
+                //       });
+                //     },
+                //   ),
+                // ),
               ],
             ),
           ),
