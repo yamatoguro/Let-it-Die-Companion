@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:lid_companion/screens/dashboard.dart';
+import 'package:lid_companion/screens/dashboard.dart';
 import 'package:lid_companion/screens/farm_control.dart';
-import 'package:lid_companion/service/database_service.dart';
 
 void main() {
   runApp(const LidCompanion());
@@ -12,15 +11,12 @@ class LidCompanion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint((DatabaseService.database != null)
-        ? "Banco funcionando"
-        : "Banco quebrado");
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Let it Die Companion',
       theme: ThemeData(
-        // primaryColor: Colors.black,
-        colorScheme: const ColorScheme.dark(),
+        primaryColor: Colors.black,
+        colorScheme: const ColorScheme.highContrastDark(),
       ),
       home: const FarmControl(),
     );

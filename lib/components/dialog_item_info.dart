@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import '../models/rnd_material.dart';
+import 'package:lid_companion/materials_data.dart';
 
 class DialogItemInfo extends StatelessWidget {
   final String buttonText;
@@ -13,6 +13,8 @@ class DialogItemInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       scrollable: true,
+      backgroundColor: Colors.blueGrey[700]!.withOpacity(0.9),
+      elevation: 10,
       title: Image.network(
         material.urlFullImage,
         alignment: Alignment.center,

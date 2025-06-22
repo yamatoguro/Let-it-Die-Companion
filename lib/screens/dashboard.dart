@@ -3,6 +3,7 @@ import 'package:lid_companion/components/dialog_select_recipe.dart';
 import 'package:lid_companion/screens/farm_control.dart';
 import 'package:lid_companion/screens/farm_recipe.dart';
 import 'package:lid_companion/screens/info_screen.dart';
+import 'package:lid_companion/screens/mushroom.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -57,16 +58,26 @@ class Dashboard extends StatelessWidget {
                   children: <Widget>[
                     Card(
                       color: Colors.grey[800]!.withOpacity(0.8),
-                      // child: Icon(Icons.all_inclusive_outlined),
                       child: ListTile(
-                        title: const Image(
-                          image: AssetImage("assets/images/IconMaterials.png"),
+                        title: Image.network(
+                          'https://static.wikia.nocookie.net/letitdie_gamepedia/images/d/d3/63_Mega_Splattershroom_1.png/revision/latest/scale-to-width-down/125?cb=20200609170235',
+                          alignment: Alignment.center,
+                          scale: .4,
                         ),
                         subtitle: const Text(
-                          'Lorem ipsum',
+                          'Mushroom List',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Mushroom(),
+                              ));
+                        },
                       ),
                     ),
                     Card(
@@ -74,11 +85,14 @@ class Dashboard extends StatelessWidget {
                       // child: Icon(Icons.all_inclusive_outlined),
                       child: ListTile(
                         title: const Image(
-                          image: AssetImage('assets/images/IconTengoku.png'),
+                          image: AssetImage('assets/images/dustin.png'),
                         ),
                         subtitle: const Text(
-                          'Lorem ipsum',
+                          'Dustin Control',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         onTap: () {},
                       ),
@@ -91,6 +105,9 @@ class Dashboard extends StatelessWidget {
                         subtitle: const Text(
                           'Lorem ipsum',
                           textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                         onTap: () {},
                       ),

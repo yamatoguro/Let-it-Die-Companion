@@ -36,6 +36,8 @@ class _RnDFormState extends State<RnDForm> {
               style: const TextStyle(fontSize: 24),
               onChanged: (String? newValue) {
                 setState(() {
+                  debugPrint(newValue);
+
                   if (newValue != null) {
                     String type = processMatType(newValue);
                     matType = newValue;
@@ -46,6 +48,7 @@ class _RnDFormState extends State<RnDForm> {
                     for (var item in list) {
                       materials.add(item.name);
                     }
+                    debugPrint(materials.toString());
                   }
                 });
               },
@@ -63,6 +66,7 @@ class _RnDFormState extends State<RnDForm> {
                 'M.I.L.K. Rare Metal',
                 'Jackal\'s Materials',
                 'Death \'Roids',
+                'Skillshroom',
               ].map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -118,7 +122,7 @@ class _RnDFormState extends State<RnDForm> {
                       context,
                       ReturnValue(
                         matType: processMatType(matType),
-                        rarity: processMat(mat),
+                        mat: processMat(mat),
                         qtd: int.parse(widget._controllerConta.text),
                       ));
                 },
@@ -175,6 +179,8 @@ class _RnDFormState extends State<RnDForm> {
         return 'jackal';
       case 'Death \'Roids':
         return 'roids';
+      case 'Skillshroom':
+        return 'skillshroom';
       default:
         return 'aluminum';
     }
@@ -183,8 +189,8 @@ class _RnDFormState extends State<RnDForm> {
 
 class ReturnValue {
   final String matType;
-  final int rarity;
+  final int mat;
   final int qtd;
 
-  ReturnValue({required this.matType, required this.rarity, required this.qtd});
+  ReturnValue({required this.matType, required this.mat, required this.qtd});
 }

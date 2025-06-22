@@ -14,6 +14,26 @@ class InfoScreen extends StatelessWidget {
               // color: Colors.tealAccent,
               fontSize: 24),
         ),
+        actions: [
+          // IconButton(
+          //   icon: const Icon(
+          //     Icons.settings_outlined,
+          //   ),
+          //   onPressed: () {},
+          // ),
+          // IconButton(
+          //   icon: const Icon(
+          //     Icons.help_outline,
+          //   ),
+          //   onPressed: () {},
+          // ),
+          // IconButton(
+          //   icon: const Icon(
+          //     Icons.schedule_outlined,
+          //   ),
+          //   onPressed: () {},
+          // ),
+        ],
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -50,7 +70,7 @@ class InfoScreen extends StatelessWidget {
                             'DynamoGamer8500',
                             // textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
+                                fontWeight: FontWeight.bold, fontSize: 14),
                           ),
                           subtitle: const Text(
                             'Diluz84',
@@ -66,15 +86,15 @@ class InfoScreen extends StatelessWidget {
                         // child: Icon(Icons.all_inclusive_outlined),
                         child: ListTile(
                           leading: const Image(
-                            image: AssetImage("assets/images/igor.jpg"),
+                            image: AssetImage("assets/images/uncle_D.png"),
                             fit: BoxFit.fitHeight,
                           ),
                           trailing: Padding(
                             padding: const EdgeInsets.all(2.0),
-                            child: _playstation(),
+                            child: _steam(),
                           ),
                           title: const Text(
-                            'Gatopretoo',
+                            'Igor',
                             // textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 16),
@@ -113,7 +133,7 @@ class InfoScreen extends StatelessWidget {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     subtitle: const Text(
-                      'yamatoguro#3531',
+                      '@yamatoguro',
                       // textAlign: TextAlign.center,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 14),

@@ -4,11 +4,9 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:lid_companion/components/dialog_item_info.dart';
-
-import '../models/rnd_material.dart';
+import 'package:lid_companion/materials_data.dart';
 
 class ItemMaterial extends StatefulWidget {
-  final int id;
   final RnDMaterial material;
   num current = 0;
   final String quantity;
@@ -17,10 +15,8 @@ class ItemMaterial extends StatefulWidget {
 
   ItemMaterial(
       {Key? key,
-      required this.id,
       required this.material,
       required this.quantity,
-      required this.current,
       this.delete,
       this.edit})
       : super(key: key);
@@ -70,7 +66,8 @@ class _ItemMaterialState extends State<ItemMaterial> {
             alignment: Alignment.center,
             scale: .4,
           ),
-          title: Text(widget.material.name),
+          title:
+              Text(widget.material.name, style: const TextStyle(fontSize: 13)),
           subtitle: Row(
             children: [..._getStars(widget.material.rarity)],
           ),
@@ -82,16 +79,14 @@ class _ItemMaterialState extends State<ItemMaterial> {
               ),
               IconButton(
                   icon: const Icon(Icons.add),
-                  onPressed: () async {
+                  onPressed: () {
                     widget.current++;
-                    await widget.edit(widget.material, true);
                     setState(() {});
                   }),
               IconButton(
                   icon: const Icon(Icons.remove),
-                  onPressed: () async {
+                  onPressed: () {
                     widget.current--;
-                    await widget.edit(widget.material, false);
                     setState(() {});
                   }),
             ],
@@ -107,7 +102,7 @@ class _ItemMaterialState extends State<ItemMaterial> {
       stars.add(const Icon(
         Icons.star,
         color: Colors.yellowAccent,
-        size: 15,
+        size: 10,
       ));
     }
     return stars;

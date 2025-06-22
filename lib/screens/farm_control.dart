@@ -3,11 +3,6 @@ import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/components/item_material.dart';
-import 'package:lid_companion/screens/info_screen.dart';
-import 'package:lid_companion/service/database_service.dart';
-
-import '../models/cake_item.dart';
-import '../models/rnd_material.dart';
 
 class FarmControl extends StatefulWidget {
   const FarmControl({Key? key}) : super(key: key);
@@ -19,115 +14,70 @@ class FarmControl extends StatefulWidget {
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
 
-  _loadItems() async {
-    List<CakeItem> items = await DatabaseService.cakeItems();
-    if (items.isNotEmpty) {
-      for (CakeItem e in items) {
-        ItemMaterial newItem = ItemMaterial(
-          id: e.id,
-          material: mats[e.type]![e.rarity - 1],
-          quantity: e.quantity.toString(),
-          delete: removeItem,
-          edit: editItem,
-          current: e.current,
-        );
-        materials.add(newItem);
-      }
-      setState(() => {});
-    }
-  }
-
   _addItem() {
     final Future future = Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => RnDForm()),
     );
-    future.then((value) async {
+    future.then((value) {
       if (value != null) {
-        var v = ReturnValue(
-            matType: value.matType, rarity: value.rarity, qtd: value.qtd);
+        var v =
+            ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
 
         ItemMaterial newItem = ItemMaterial(
-          id: DatabaseService.getID(mats[v.matType]![v.rarity]),
-          material: mats[v.matType]![v.rarity - 1],
+          material: mats[v.matType]![v.mat],
           quantity: v.qtd.toString(),
-          current: 0,
           delete: removeItem,
           edit: editItem,
         );
-        if (materials.any((item) => (item).material == newItem.material)) {
+        if (materials.any(
+            (item) => (item as ItemMaterial).material == newItem.material)) {
           var item = materials
-              .where((e) => (e).material.name == newItem.material.name)
+              .where((e) =>
+                  (e as ItemMaterial).material.name == newItem.material.name)
               .first;
           newItem = ItemMaterial(
-            id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
-            material: mats[v.matType]![v.rarity],
-            quantity: (int.parse((item).quantity) + int.parse(newItem.quantity))
+            material: mats[v.matType]![v.mat],
+            quantity: (int.parse((item as ItemMaterial).quantity) +
+                    int.parse(newItem.quantity))
                 .toString(),
-            current: item.current,
             delete: removeItem,
             edit: editItem,
           );
           materials.remove(item);
           materials.add(newItem);
-          await DatabaseService.updateCakeItem(CakeItem(
-              id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
-              type: v.matType,
-              rarity: v.rarity,
-              quantity: v.qtd,
-              current: item.current as int));
         } else {
           materials.add(newItem);
-          await DatabaseService.insertCakeItem(CakeItem(
-              id: DatabaseService.getID(mats[v.matType]![v.rarity - 1]),
-              type: v.matType,
-              rarity: v.rarity,
-              quantity: v.qtd,
-              current: 0));
         }
+        setState(() => {});
       }
     });
   }
 
-  removeItem(material) async {
-    ItemMaterial item = materials.where((e) => (e).material == material).first;
-    await DatabaseService.deleteCakeItem(CakeItem(
-            id: item.id,
-            type: item.material.type,
-            rarity: item.material.rarity,
-            quantity: int.parse(item.quantity),
-            current: 0))
-        .then((value) => materials.remove(item));
-    setState(() {});
+  removeItem(material) {
+    setState(() {
+      var item = materials
+          .where((e) => (e as ItemMaterial).material == material)
+          .first;
+      materials.remove(item);
+    });
   }
 
-  editItem(material, bool add) async {
-    ItemMaterial item = materials.where((e) => (e).material == material).first;
-    await DatabaseService.updateCakeItem(CakeItem(
-            id: item.id,
-            type: item.material.type,
-            rarity: item.material.rarity,
-            quantity: int.parse(item.quantity),
-            current: item.current as int))
-        .then((value) => setState(() {}));
+  editItem(material) {
+    setState(() {
+      var item = materials
+          .where((e) => (e as ItemMaterial).material == material)
+          .first;
+
+      materials.remove(item);
+    });
   }
 
-  endRun() {
-    List<CakeItem> cakelist = [];
-    for (ItemMaterial item in materials) {
-      cakelist.add(CakeItem(
-          id: item.id,
-          type: item.material.type,
-          rarity: item.material.rarity,
-          quantity: int.parse(item.quantity),
-          current: item.current as int));
-    }
-    DatabaseService.updateCakeList(cakelist);
-  }
-
-  List<ItemMaterial> materials = [
-    // ItemMaterial(material: mats['tuber']![3], quantity: '2'),
-    // ItemMaterial(material: mats['dod']![7], quantity: '2'),
+  List<Widget> materials = [
+    // ItemMaterial(material: mats['dod']![8], quantity: '2'),
+    // ItemMaterial(material: mats['we']![8], quantity: '2'),
+    // ItemMaterial(material: mats['cw']![8], quantity: '2'),
+    // ItemMaterial(material: mats['milk']![8], quantity: '2'),
     // ItemMaterial(material: mats['aluminum']![2], quantity: '2'),
     // ItemMaterial(material: mats['aluminum']![3], quantity: '2'),
     // ItemMaterial(material: mats['aluminum']![4], quantity: '2'),
@@ -138,25 +88,33 @@ class _FarmControlState extends State<FarmControl> {
 
   @override
   Widget build(BuildContext context) {
-    if (materials.isEmpty) {
-      _loadItems();
-    }
     return Scaffold(
       appBar: AppBar(
         title: const Text('Let it Die Companion'),
-        actions: [
-          IconButton(
-            icon: const Icon(
-              Icons.help_outline,
-            ),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const InfoScreen(),
-                  ));
-            },
-          ),
+        actions: const [
+          // IconButton(
+          //   onPressed: () {
+          //     _addItem();
+          //   },
+          //   icon: const Icon(Icons.add_circle_outline_outlined),
+          // ),
+          // Padding(
+          //   padding: const EdgeInsets.all(10.0),
+          //   child: OutlinedButton(
+          //     style: OutlinedButton.styleFrom(
+          //       shape: const CircleBorder(),
+          //       padding: const EdgeInsets.all(0),
+          //       side: const BorderSide(
+          //         color: Colors.deepPurpleAccent,
+          //         width: 2.0,
+          //       ),
+          //     ),
+          //     onPressed: () {
+          //       _addItem();
+          //     },
+          //     child: const Icon(Icons.add),
+          //   ),
+          // ),
         ],
       ),
       body: Container(
@@ -205,7 +163,7 @@ class _FarmControlState extends State<FarmControl> {
                       onPressed: () {
                         List<ItemMaterial> result = [];
                         for (var element in materials) {
-                          result.add(element);
+                          result.add(element as ItemMaterial);
                         }
                         Future future = showDialog(
                           context: context,
@@ -215,25 +173,21 @@ class _FarmControlState extends State<FarmControl> {
                         );
                         future.then((value) {
                           setState(() {
-                            List<Widget> matsList = materials
-                                .where(
-                                    (e) => int.parse((e).quantity) > e.current)
+                            List<Widget> mats = materials
+                                .where((e) =>
+                                    int.parse((e as ItemMaterial).quantity) >
+                                    e.current)
                                 .toList();
                             materials = [];
-                            for (var e in matsList) {
+                            for (var e in mats) {
                               num quantity =
                                   int.parse((e as ItemMaterial).quantity) -
                                       e.current;
                               RnDMaterial m = e.material;
                               e = ItemMaterial(
-                                id: m.rarity,
-                                material: m,
-                                quantity: quantity.toString(),
-                                current: 0,
-                              );
+                                  material: m, quantity: quantity.toString());
                               materials.add(e);
                             }
-                            endRun();
                           });
                         });
                       },
@@ -249,6 +203,11 @@ class _FarmControlState extends State<FarmControl> {
           ),
         ),
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () => _addItem(),
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }

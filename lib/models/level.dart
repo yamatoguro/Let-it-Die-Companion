@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:lid_companion/models/rnd_material.dart';
+import 'package:lid_companion/materials_data.dart';
 
 class Level {
   //Requirements
