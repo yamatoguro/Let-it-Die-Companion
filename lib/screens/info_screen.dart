@@ -70,7 +70,7 @@ class InfoScreen extends StatelessWidget {
                             'DynamoGamer8500',
                             // textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
+                                fontWeight: FontWeight.bold, fontSize: 14),
                           ),
                           subtitle: const Text(
                             'Diluz84',
@@ -133,7 +133,7 @@ class InfoScreen extends StatelessWidget {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     subtitle: const Text(
-                      'yamatoguro#3531',
+                      '@yamatoguro',
                       // textAlign: TextAlign.center,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 14),

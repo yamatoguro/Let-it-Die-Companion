@@ -3,6 +3,7 @@ import 'package:lid_companion/components/dialog_select_recipe.dart';
 import 'package:lid_companion/screens/farm_control.dart';
 import 'package:lid_companion/screens/farm_recipe.dart';
 import 'package:lid_companion/screens/info_screen.dart';
+import 'package:lid_companion/screens/mushroom.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -70,7 +71,13 @@ class Dashboard extends StatelessWidget {
                             fontSize: 12,
                           ),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Mushroom(),
+                              ));
+                        },
                       ),
                     ),
                     Card(
@@ -78,10 +85,10 @@ class Dashboard extends StatelessWidget {
                       // child: Icon(Icons.all_inclusive_outlined),
                       child: ListTile(
                         title: const Image(
-                          image: AssetImage('assets/images/IconTengoku.png'),
+                          image: AssetImage('assets/images/dustin.png'),
                         ),
                         subtitle: const Text(
-                          'Lorem ipsum',
+                          'Dustin Control',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 12,

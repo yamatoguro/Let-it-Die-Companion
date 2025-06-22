@@ -18,7 +18,7 @@ class LidCompanion extends StatelessWidget {
         primaryColor: Colors.black,
         colorScheme: const ColorScheme.highContrastDark(),
       ),
-      home: const Dashboard(),
+      home: const FarmControl(),
     );
   }
 }

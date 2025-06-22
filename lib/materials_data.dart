@@ -3647,7 +3647,7 @@ List<RnDMaterial> milk = [
   RnDMaterial(
     name: 'M.I.L.K. 44CE Metal H',
     url:
-        'https://letitdie.wiki.gg/images/thumb/8/81/MILK_44CE_H.png/16px-MILK_44CE_H.png?c82ea0',
+        'https://github.com/yamatoguro/lid_companion_images/blob/main/milk_44ce_h.png?raw=true',
     rarity: 8,
     where: SingleChildScrollView(
       scrollDirection: Axis.vertical,
