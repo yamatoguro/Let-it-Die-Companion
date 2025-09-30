@@ -26,6 +26,7 @@ class _FarmRecipeState extends State<FarmRecipe> {
         materials.add(ItemMaterial(
           material: mats[v.matType]![v.mat],
           quantity: v.qtd.toString(),
+          type: v.matType,
           delete: removeItem,
           edit: editItem,
         ));
@@ -52,32 +53,7 @@ class _FarmRecipeState extends State<FarmRecipe> {
     });
   }
 
-  List<Widget> materials = [
-    ItemMaterial(material: mats['iron']![0], quantity: '2'),
-    ItemMaterial(material: mats['iron']![1], quantity: '2'),
-    ItemMaterial(material: mats['iron']![2], quantity: '2'),
-    ItemMaterial(material: mats['iron']![3], quantity: '2'),
-    ItemMaterial(material: mats['iron']![4], quantity: '2'),
-    ItemMaterial(material: mats['iron']![5], quantity: '2'),
-    ItemMaterial(material: mats['iron']![6], quantity: '2'),
-    ItemMaterial(material: mats['iron']![7], quantity: '2'),
-    // ItemMaterial(material: mats['copper']![0], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![1], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![2], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![3], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![4], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![5], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![6], quantity: '250'),
-    // ItemMaterial(material: mats['copper']![7], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![0], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![1], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![2], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![3], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![4], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![5], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![6], quantity: '250'),
-    // ItemMaterial(material: mats['fiber']![7], quantity: '250'),
-  ];
+  List<Widget> materials = [];
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +112,11 @@ class _FarmRecipeState extends State<FarmRecipe> {
                                     e.current;
                             RnDMaterial m = e.material;
                             e = ItemMaterial(
-                                material: m, quantity: quantity.toString());
+                                material: m,
+                                quantity: quantity.toString(),
+                                type: e.type,
+                                delete: removeItem,
+                                edit: editItem);
                             materials.add(e);
                           }
                         });
