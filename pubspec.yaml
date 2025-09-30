@@ -17,6 +17,7 @@ dependencies:
   flutter_slidable:
   flutter_launcher_icons:
   # url_launcher:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:

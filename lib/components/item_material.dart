@@ -9,7 +9,8 @@ import 'package:lid_companion/materials_data.dart';
 class ItemMaterial extends StatefulWidget {
   final RnDMaterial material;
   num current = 0;
-  final String quantity;
+  String quantity;
+  final String type;
   final dynamic delete;
   final dynamic edit;
 
@@ -17,6 +18,7 @@ class ItemMaterial extends StatefulWidget {
       {Key? key,
       required this.material,
       required this.quantity,
+      required this.type,
       this.delete,
       this.edit})
       : super(key: key);

@@ -1,8 +1,10 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:lid_companion/components/dialog_add_material.dart';
 import 'package:lid_companion/components/dialog_farm_result.dart';
 import 'package:lid_companion/materials_data.dart';
 import 'package:lid_companion/components/item_material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FarmControl extends StatefulWidget {
   const FarmControl({Key? key}) : super(key: key);
@@ -14,12 +16,50 @@ class FarmControl extends StatefulWidget {
 class _FarmControlState extends State<FarmControl> {
   bool checked = false;
 
-  _addItem() {
+  @override
+  void initState() {
+    super.initState();
+    _loadMaterials();
+  }
+
+  Future<void> _saveMaterials() async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String> matsJson = materials
+        .map((e) => jsonEncode({
+              'matType': (e as ItemMaterial).type,
+              'mat': (e).material.name,
+              'qtd': (e).quantity,
+            }))
+        .toList();
+    await prefs.setStringList('materials', matsJson);
+  }
+
+  Future<void> _loadMaterials() async {
+    final prefs = await SharedPreferences.getInstance();
+    List<String>? matsJson = prefs.getStringList('materials');
+    if (matsJson != null) {
+      setState(() {
+        materials = matsJson.map((str) {
+          var map = jsonDecode(str);
+          var mat =
+              mats[map['matType']]!.firstWhere((m) => m.name == map['mat']);
+          return ItemMaterial(
+            material: mat,
+            quantity: map['qtd'],
+            delete: removeItem,
+            type: map['matType'],
+          );
+        }).toList();
+      });
+    }
+  }
+
+  _addItem() async {
     final Future future = Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => RnDForm()),
     );
-    future.then((value) {
+    future.then((value) async {
       if (value != null) {
         var v =
             ReturnValue(matType: value.matType, mat: value.mat, qtd: value.qtd);
@@ -27,6 +67,7 @@ class _FarmControlState extends State<FarmControl> {
         ItemMaterial newItem = ItemMaterial(
           material: mats[v.matType]![v.mat],
           quantity: v.qtd.toString(),
+          type: v.matType,
           delete: removeItem,
           edit: editItem,
         );
@@ -41,6 +82,7 @@ class _FarmControlState extends State<FarmControl> {
             quantity: (int.parse((item as ItemMaterial).quantity) +
                     int.parse(newItem.quantity))
                 .toString(),
+            type: v.matType,
             delete: removeItem,
             edit: editItem,
           );
@@ -50,20 +92,22 @@ class _FarmControlState extends State<FarmControl> {
           materials.add(newItem);
         }
         setState(() => {});
+        await _saveMaterials();
       }
     });
   }
 
-  removeItem(material) {
+  removeItem(material) async {
     setState(() {
       var item = materials
           .where((e) => (e as ItemMaterial).material == material)
           .first;
       materials.remove(item);
     });
+    await _saveMaterials();
   }
 
-  editItem(material) {
+  editItem(material) async {
     setState(() {
       var item = materials
           .where((e) => (e as ItemMaterial).material == material)
@@ -71,6 +115,7 @@ class _FarmControlState extends State<FarmControl> {
 
       materials.remove(item);
     });
+    await _saveMaterials();
   }
 
   List<Widget> materials = [
@@ -185,10 +230,15 @@ class _FarmControlState extends State<FarmControl> {
                                       e.current;
                               RnDMaterial m = e.material;
                               e = ItemMaterial(
-                                  material: m, quantity: quantity.toString());
+                                  material: m,
+                                  quantity: quantity.toString(),
+                                  delete: removeItem,
+                                  edit: editItem,
+                                  type: e.type);
                               materials.add(e);
                             }
                           });
+                          _saveMaterials(); // Adiciona salvamento após atualizar a lista
                         });
                       },
                       child: const Text('End run'),

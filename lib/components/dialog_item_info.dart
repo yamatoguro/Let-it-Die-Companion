@@ -26,9 +26,7 @@ class DialogItemInfo extends StatelessWidget {
       content: SizedBox(
         height: 200.0,
         width: 300.0,
-        child: Expanded(
-          child: material.where,
-        ),
+        child: material.where,
       ),
       actions: <Widget>[
         ElevatedButton(
